@@ -1,0 +1,32 @@
+                Device driver for PROGRAPE
+       for Linux kernel release 2.6.xx <http://kernel.org>
+
+         Author. Tsuyoshi Hamada <hamada@progrape.jp>
+          Copyright (c) 2006-2007 by Tsuyoshi Hamada.
+                     All rights reserved.
+
+These are the release notes for the PROGRAPE device driver.  Read them
+carefully, as they tell you what is all about, explain how to install
+the device driver, and what to do if something goes wrong.
+
+INSTALLING the device driver:
+
+ - COMPILING the device driver:
+
+   make clean
+   make
+
+ - LOADING the device driver:
+
+   make load
+
+ - UNLOADING the device driver:
+
+   make unload
+
+
+IF SOMETHING GOES WRONG:
+ - If you have problems that seem to be due to the device driver bugs,
+   please check the system log files such as /var/log/kern.log etc.
+   To enable debugging output to system logfile(such as /proc/kmsg),
+   uncomment a line of 'DEBUG=y' in Makefile.

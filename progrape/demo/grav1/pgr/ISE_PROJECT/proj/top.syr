@@ -1,0 +1,1921 @@
+Release 8.1.03i - xst I.27
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.06 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.06 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s5000-5-fg900
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 2
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : top.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/top is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd
+WARNING:HDLParsers:3215 - Unit work/top/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd
+WARNING:HDLParsers:3215 - Unit work/CLK_MULDIV is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd
+WARNING:HDLParsers:3215 - Unit work/CLK_MULDIV/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd
+WARNING:HDLParsers:3215 - Unit work/user is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd
+WARNING:HDLParsers:3215 - Unit work/user/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_dbus_hiz is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_dbus_hiz/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_mem_adr is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_mem_adr/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_mem_re is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_mem_re/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_start_adr is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_start_adr/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_state is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd
+WARNING:HDLParsers:3215 - Unit work/dmar_state/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd
+WARNING:HDLParsers:3215 - Unit work/pgpg_mem is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd
+WARNING:HDLParsers:3215 - Unit work/pgpg_mem/RTL is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_mem_adr is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_mem_adr/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_mem_we is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_mem_we/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_start_adr is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_start_adr/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_state is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd
+WARNING:HDLParsers:3215 - Unit work/dmaw_state/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd
+WARNING:HDLParsers:3215 - Unit work/adr_dec is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd
+WARNING:HDLParsers:3215 - Unit work/adr_dec/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd
+WARNING:HDLParsers:3215 - Unit work/calc is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd
+WARNING:HDLParsers:3215 - Unit work/calc/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd
+WARNING:HDLParsers:3215 - Unit work/jmem is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd
+WARNING:HDLParsers:3215 - Unit work/jmem/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd
+WARNING:HDLParsers:3215 - Unit work/pipe_sts is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd
+WARNING:HDLParsers:3215 - Unit work/pipe_sts/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd
+WARNING:HDLParsers:3215 - Unit work/setn is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd
+WARNING:HDLParsers:3215 - Unit work/setn/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd
+WARNING:HDLParsers:3215 - Unit work/dpram is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd
+WARNING:HDLParsers:3215 - Unit work/dpram/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pipe is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pipe/std is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd
+WARNING:HDLParsers:3215 - Unit work/pipe is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd
+WARNING:HDLParsers:3215 - Unit work/pipe/std is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_fix_sub_32_3 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_fix_sub_32_3/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_32_3 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_32_3/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_conv_ftol_32_17_8_4 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_conv_ftol_32_17_8_4/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/unreg_add_sub is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/unreg_add_sub/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/penc_31_5 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/penc_31_5/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/unreg_shift_ftol_30_10 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/unreg_shift_ftol_30_10/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/bram_rom_8408_10_8_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/bram_rom_8408_10_8_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_shift_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_shift_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_unsigned_add_itp_17_8_6_9 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_unsigned_add_itp_17_8_6_9/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/lcell_rom_a106_6_10_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/lcell_rom_a106_6_10_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/lcell_rom_a906_6_9_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/lcell_rom_a906_6_9_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_unsigned_add_umult_6_9_2 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_unsigned_add_umult_6_9_2/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_17_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_17_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_16_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_16_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_11_0 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_11_0/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_ADD_16_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_ADD_16_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_shift_m1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_shift_m1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_mul_17_2 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_mul_17_2/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_ADD_15_2 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_ADD_15_2/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_sdiv_17_2 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_log_sdiv_17_2/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_16_2 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_adder_RCA_SUB_16_2/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_float_expadd_m31_17_8_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_float_expadd_m31_17_8_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_conv_ltof_17_8_57_5 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_conv_ltof_17_8_57_5/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/reged_shift_ltof_9_7_56_3 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/reged_shift_ltof_9_7_56_3/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/bram_rom_8f28_8_8_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/bram_rom_8f28_8_8_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_fix_smaccum_57_64_4 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_fix_smaccum_57_64_4/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/fix_accum_reg_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/fix_accum_reg_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/fix_accum_reg_last_1 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/fix_accum_reg_last_1/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_7 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_7/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_27 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_27/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_22 is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_pdelay_17_22/rtl is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_lcell is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+WARNING:HDLParsers:3215 - Unit work/pg_lcell/schematic is now defined in a different file: was /usr/local/src/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd, now is /home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" in Library work.
+Architecture rtl of Entity dpram is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd" in Library work.
+Architecture rtl of Entity pg_fix_sub_32_3 is up to date.
+Architecture rtl of Entity pg_adder_rca_sub_32_3 is up to date.
+Architecture rtl of Entity pg_conv_ftol_32_17_8_4 is up to date.
+Architecture rtl of Entity unreg_add_sub is up to date.
+Architecture rtl of Entity penc_31_5 is up to date.
+Architecture rtl of Entity unreg_shift_ftol_30_10 is up to date.
+Architecture rtl of Entity bram_rom_8408_10_8_1 is up to date.
+Architecture rtl of Entity pg_log_shift_1 is up to date.
+Architecture rtl of Entity pg_log_unsigned_add_itp_17_8_6_9 is up to date.
+Architecture rtl of Entity lcell_rom_a106_6_10_1 is up to date.
+Architecture rtl of Entity lcell_rom_a906_6_9_1 is up to date.
+Architecture rtl of Entity pg_log_unsigned_add_umult_6_9_2 is up to date.
+Architecture rtl of Entity pg_adder_rca_sub_17_1 is up to date.
+Architecture rtl of Entity pg_adder_rca_sub_16_1 is up to date.
+Architecture rtl of Entity pg_adder_rca_sub_11_0 is up to date.
+Architecture rtl of Entity pg_adder_rca_add_16_1 is up to date.
+Architecture rtl of Entity pg_log_shift_m1 is up to date.
+Architecture rtl of Entity pg_log_mul_17_2 is up to date.
+Architecture rtl of Entity pg_adder_rca_add_15_2 is up to date.
+Architecture rtl of Entity pg_log_sdiv_17_2 is up to date.
+Architecture rtl of Entity pg_adder_rca_sub_16_2 is up to date.
+Architecture rtl of Entity pg_float_expadd_m31_17_8_1 is up to date.
+Architecture rtl of Entity pg_conv_ltof_17_8_57_5 is up to date.
+Architecture rtl of Entity reged_shift_ltof_9_7_56_3 is up to date.
+Architecture rtl of Entity bram_rom_8f28_8_8_1 is up to date.
+Architecture rtl of Entity pg_fix_smaccum_57_64_4 is up to date.
+Architecture rtl of Entity fix_accum_reg_1 is up to date.
+Architecture rtl of Entity fix_accum_reg_last_1 is up to date.
+Architecture rtl of Entity pg_pdelay_17_7 is up to date.
+Architecture rtl of Entity pg_pdelay_17_27 is up to date.
+Architecture rtl of Entity pg_pdelay_17_22 is up to date.
+Architecture schematic of Entity pg_lcell is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd" in Library work.
+Architecture rtl of Entity adr_dec is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd" in Library work.
+Architecture std of Entity pg_pipe is up to date.
+Architecture std of Entity pipe is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd" in Library work.
+Architecture rtl of Entity calc is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd" in Library work.
+Architecture rtl of Entity pipe_sts is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd" in Library work.
+Architecture rtl of Entity setn is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd" in Library work.
+Architecture rtl of Entity jmem is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd" in Library work.
+Entity <dmaw_mem_we> compiled.
+Entity <dmaw_mem_we> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd" in Library work.
+Entity <dmaw_mem_adr> compiled.
+Entity <dmaw_mem_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd" in Library work.
+Entity <dmaw_start_adr> compiled.
+Entity <dmaw_start_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd" in Library work.
+Entity <dmaw_state> compiled.
+Entity <dmaw_state> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd" in Library work.
+Architecture rtl of Entity pgpg_mem is up to date.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd" in Library work.
+Entity <dmar_state> compiled.
+Entity <dmar_state> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd" in Library work.
+Entity <dmar_start_adr> compiled.
+Entity <dmar_start_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd" in Library work.
+Entity <dmar_mem_adr> compiled.
+Entity <dmar_mem_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd" in Library work.
+Entity <dmar_mem_re> compiled.
+Entity <dmar_mem_re> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd" in Library work.
+Entity <dmar_dbus_hiz> compiled.
+Entity <dmar_dbus_hiz> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" in Library work.
+Entity <clk_muldiv> compiled.
+Entity <clk_muldiv> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd" in Library work.
+Entity <dmaw> compiled.
+Entity <dmaw> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd" in Library work.
+Entity <dmar> compiled.
+Entity <dmar> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd" in Library work.
+Entity <user> compiled.
+Entity <user> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <rtl>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> (Architecture <rtl>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing generic Entity <CLK_MULDIV> (Architecture <rtl>).
+	CLKFX_MULTIPLY = 2
+
+	CLKFX_DIVIDE = 2
+
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLK90' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLK180' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLK270' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLK2X' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLK2X180' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLKDV' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'CLKFX180' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'PSDONE' of component 'DCM'.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Unconnected output port 'STATUS' of component 'DCM'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 90: Generating a Black Box for component <DCM>.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 108: Generating a Black Box for component <IBUFG>.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 109: Generating a Black Box for component <BUFG>.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd" line 110: Generating a Black Box for component <BUFG>.
+Entity <CLK_MULDIV> analyzed. Unit <CLK_MULDIV> generated.
+
+Analyzing Entity <dmaw> (Architecture <rtl>).
+Entity <dmaw> analyzed. Unit <dmaw> generated.
+
+Analyzing Entity <dmar> (Architecture <rtl>).
+Entity <dmar> analyzed. Unit <dmar> generated.
+
+Analyzing Entity <dmar_state> (Architecture <rtl>).
+Entity <dmar_state> analyzed. Unit <dmar_state> generated.
+
+Analyzing Entity <dmaw_state> (Architecture <rtl>).
+Entity <dmaw_state> analyzed. Unit <dmaw_state> generated.
+
+Analyzing Entity <dmar_start_adr> (Architecture <rtl>).
+Entity <dmar_start_adr> analyzed. Unit <dmar_start_adr> generated.
+
+Analyzing Entity <dmaw_start_adr> (Architecture <rtl>).
+Entity <dmaw_start_adr> analyzed. Unit <dmaw_start_adr> generated.
+
+Analyzing Entity <dmar_mem_adr> (Architecture <rtl>).
+Entity <dmar_mem_adr> analyzed. Unit <dmar_mem_adr> generated.
+
+Analyzing Entity <dmaw_mem_adr> (Architecture <rtl>).
+Entity <dmaw_mem_adr> analyzed. Unit <dmaw_mem_adr> generated.
+
+Analyzing Entity <dmar_mem_re> (Architecture <rtl>).
+Entity <dmar_mem_re> analyzed. Unit <dmar_mem_re> generated.
+
+Analyzing Entity <dmaw_mem_we> (Architecture <rtl>).
+Entity <dmaw_mem_we> analyzed. Unit <dmaw_mem_we> generated.
+
+Analyzing Entity <dmar_dbus_hiz> (Architecture <rtl>).
+Entity <dmar_dbus_hiz> analyzed. Unit <dmar_dbus_hiz> generated.
+
+Analyzing Entity <user> (Architecture <rtl>).
+Entity <user> analyzed. Unit <user> generated.
+
+Analyzing Entity <pgpg_mem> (Architecture <rtl>).
+Entity <pgpg_mem> analyzed. Unit <pgpg_mem> generated.
+
+Analyzing Entity <adr_dec> (Architecture <rtl>).
+WARNING:Xst:819 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd" line 42: The following signals are missing in the process sensitivity list:
+   FPGA_NO.
+WARNING:Xst:819 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd" line 51: The following signals are missing in the process sensitivity list:
+   FPGA_NO.
+Entity <adr_dec> analyzed. Unit <adr_dec> generated.
+
+Analyzing generic Entity <pg_pipe> (Architecture <std>).
+	JDATA_WIDTH = 128
+
+	IDATA_WIDTH = 64
+
+Entity <pg_pipe> analyzed. Unit <pg_pipe> generated.
+
+Analyzing generic Entity <pipe> (Architecture <std>).
+	JDATA_WIDTH = 128
+
+	IDATA_WIDTH = 64
+
+Entity <pipe> analyzed. Unit <pipe> generated.
+
+Analyzing Entity <pg_fix_sub_32_3> (Architecture <rtl>).
+Entity <pg_fix_sub_32_3> analyzed. Unit <pg_fix_sub_32_3> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_32_3> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_32_3> analyzed. Unit <pg_adder_RCA_SUB_32_3> generated.
+
+Analyzing Entity <pg_conv_ftol_32_17_8_4> (Architecture <rtl>).
+Entity <pg_conv_ftol_32_17_8_4> analyzed. Unit <pg_conv_ftol_32_17_8_4> generated.
+
+Analyzing generic Entity <unreg_add_sub> (Architecture <rtl>).
+	WIDTH = 31
+
+	DIRECTION = "ADD"
+
+Entity <unreg_add_sub> analyzed. Unit <unreg_add_sub> generated.
+
+Analyzing Entity <penc_31_5> (Architecture <rtl>).
+Entity <penc_31_5> analyzed. Unit <penc_31_5> generated.
+
+Analyzing Entity <unreg_shift_ftol_30_10> (Architecture <rtl>).
+Entity <unreg_shift_ftol_30_10> analyzed. Unit <unreg_shift_ftol_30_10> generated.
+
+Analyzing Entity <bram_rom_8408_10_8_1> (Architecture <rtl>).
+Entity <bram_rom_8408_10_8_1> analyzed. Unit <bram_rom_8408_10_8_1> generated.
+
+Analyzing generic Entity <unreg_add_sub.0> (Architecture <rtl>).
+	WIDTH = 5
+
+	DIRECTION = "ADD"
+
+Entity <unreg_add_sub.0> analyzed. Unit <unreg_add_sub.0> generated.
+
+Analyzing generic Entity <pg_log_shift_1> (Architecture <rtl>).
+	PG_WIDTH = 17
+
+Entity <pg_log_shift_1> analyzed. Unit <pg_log_shift_1> generated.
+
+Analyzing Entity <pg_log_unsigned_add_itp_17_8_6_9> (Architecture <rtl>).
+Entity <pg_log_unsigned_add_itp_17_8_6_9> analyzed. Unit <pg_log_unsigned_add_itp_17_8_6_9> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_17_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_17_1> analyzed. Unit <pg_adder_RCA_SUB_17_1> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_16_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_16_1> analyzed. Unit <pg_adder_RCA_SUB_16_1> generated.
+
+Analyzing Entity <lcell_rom_a106_6_10_1> (Architecture <rtl>).
+Entity <lcell_rom_a106_6_10_1> analyzed. Unit <lcell_rom_a106_6_10_1> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0110001100000101
+
+	FF = 0
+
+Entity <pg_lcell> analyzed. Unit <pg_lcell> generated.
+
+Analyzing generic Entity <pg_lcell.1> (Architecture <schematic>).
+	MASK = <u>1011000001110001
+
+	FF = 0
+
+Entity <pg_lcell.1> analyzed. Unit <pg_lcell.1> generated.
+
+Analyzing generic Entity <pg_lcell.2> (Architecture <schematic>).
+	MASK = <u>0101100001110111
+
+	FF = 0
+
+Entity <pg_lcell.2> analyzed. Unit <pg_lcell.2> generated.
+
+Analyzing generic Entity <pg_lcell.3> (Architecture <schematic>).
+	MASK = <u>1101101101000001
+
+	FF = 0
+
+Entity <pg_lcell.3> analyzed. Unit <pg_lcell.3> generated.
+
+Analyzing generic Entity <pg_lcell.4> (Architecture <schematic>).
+	MASK = <u>0110011001011101
+
+	FF = 0
+
+Entity <pg_lcell.4> analyzed. Unit <pg_lcell.4> generated.
+
+Analyzing generic Entity <pg_lcell.5> (Architecture <schematic>).
+	MASK = <u>1101010001001001
+
+	FF = 0
+
+Entity <pg_lcell.5> analyzed. Unit <pg_lcell.5> generated.
+
+Analyzing generic Entity <pg_lcell.6> (Architecture <schematic>).
+	MASK = <u>1100110100010001
+
+	FF = 0
+
+Entity <pg_lcell.6> analyzed. Unit <pg_lcell.6> generated.
+
+Analyzing generic Entity <pg_lcell.7> (Architecture <schematic>).
+	MASK = <u>0011110011001011
+
+	FF = 0
+
+Entity <pg_lcell.7> analyzed. Unit <pg_lcell.7> generated.
+
+Analyzing generic Entity <pg_lcell.8> (Architecture <schematic>).
+	MASK = <u>0000001111000111
+
+	FF = 0
+
+Entity <pg_lcell.8> analyzed. Unit <pg_lcell.8> generated.
+
+Analyzing generic Entity <pg_lcell.9> (Architecture <schematic>).
+	MASK = <u>0000000000111111
+
+	FF = 0
+
+Entity <pg_lcell.9> analyzed. Unit <pg_lcell.9> generated.
+
+Analyzing generic Entity <pg_lcell.10> (Architecture <schematic>).
+	MASK = <u>1001001110010011
+
+	FF = 0
+
+Entity <pg_lcell.10> analyzed. Unit <pg_lcell.10> generated.
+
+Analyzing generic Entity <pg_lcell.11> (Architecture <schematic>).
+	MASK = <u>1011101110101010
+
+	FF = 0
+
+Entity <pg_lcell.11> analyzed. Unit <pg_lcell.11> generated.
+
+Analyzing generic Entity <pg_lcell.12> (Architecture <schematic>).
+	MASK = <u>1000100100111000
+
+	FF = 0
+
+Entity <pg_lcell.12> analyzed. Unit <pg_lcell.12> generated.
+
+Analyzing generic Entity <pg_lcell.13> (Architecture <schematic>).
+	MASK = <u>0111100010010011
+
+	FF = 0
+
+Entity <pg_lcell.13> analyzed. Unit <pg_lcell.13> generated.
+
+Analyzing generic Entity <pg_lcell.14> (Architecture <schematic>).
+	MASK = <u>0000011110001001
+
+	FF = 0
+
+Entity <pg_lcell.14> analyzed. Unit <pg_lcell.14> generated.
+
+Analyzing generic Entity <pg_lcell.15> (Architecture <schematic>).
+	MASK = <u>0000000001111000
+
+	FF = 0
+
+Entity <pg_lcell.15> analyzed. Unit <pg_lcell.15> generated.
+
+Analyzing generic Entity <pg_lcell.16> (Architecture <schematic>).
+	MASK = <u>0000000000000111
+
+	FF = 0
+
+Entity <pg_lcell.16> analyzed. Unit <pg_lcell.16> generated.
+
+Analyzing generic Entity <pg_lcell.17> (Architecture <schematic>).
+	MASK = <u>0000000000011010
+
+	FF = 0
+
+Entity <pg_lcell.17> analyzed. Unit <pg_lcell.17> generated.
+
+Analyzing generic Entity <pg_lcell.18> (Architecture <schematic>).
+	MASK = <u>0000000001111001
+
+	FF = 0
+
+Entity <pg_lcell.18> analyzed. Unit <pg_lcell.18> generated.
+
+Analyzing Entity <lcell_rom_a906_6_9_1> (Architecture <rtl>).
+Entity <lcell_rom_a906_6_9_1> analyzed. Unit <lcell_rom_a906_6_9_1> generated.
+
+Analyzing generic Entity <pg_lcell.19> (Architecture <schematic>).
+	MASK = <u>1101110101100100
+
+	FF = 0
+
+Entity <pg_lcell.19> analyzed. Unit <pg_lcell.19> generated.
+
+Analyzing generic Entity <pg_lcell.20> (Architecture <schematic>).
+	MASK = <u>0010111101011111
+
+	FF = 0
+
+Entity <pg_lcell.20> analyzed. Unit <pg_lcell.20> generated.
+
+Analyzing generic Entity <pg_lcell.21> (Architecture <schematic>).
+	MASK = <u>0100011110100010
+
+	FF = 0
+
+Entity <pg_lcell.21> analyzed. Unit <pg_lcell.21> generated.
+
+Analyzing generic Entity <pg_lcell.22> (Architecture <schematic>).
+	MASK = <u>0111110111101011
+
+	FF = 0
+
+Entity <pg_lcell.22> analyzed. Unit <pg_lcell.22> generated.
+
+Analyzing generic Entity <pg_lcell.23> (Architecture <schematic>).
+	MASK = <u>0010100111100110
+
+	FF = 0
+
+Entity <pg_lcell.23> analyzed. Unit <pg_lcell.23> generated.
+
+Analyzing generic Entity <pg_lcell.24> (Architecture <schematic>).
+	MASK = <u>0001101101001011
+
+	FF = 0
+
+Entity <pg_lcell.24> analyzed. Unit <pg_lcell.24> generated.
+
+Analyzing generic Entity <pg_lcell.25> (Architecture <schematic>).
+	MASK = <u>1111100011011001
+
+	FF = 0
+
+Entity <pg_lcell.25> analyzed. Unit <pg_lcell.25> generated.
+
+Analyzing generic Entity <pg_lcell.26> (Architecture <schematic>).
+	MASK = <u>0000011111000111
+
+	FF = 0
+
+Entity <pg_lcell.26> analyzed. Unit <pg_lcell.26> generated.
+
+Analyzing generic Entity <pg_lcell.27> (Architecture <schematic>).
+	MASK = <u>0101100010010010
+
+	FF = 0
+
+Entity <pg_lcell.27> analyzed. Unit <pg_lcell.27> generated.
+
+Analyzing generic Entity <pg_lcell.28> (Architecture <schematic>).
+	MASK = <u>0011010100001010
+
+	FF = 0
+
+Entity <pg_lcell.28> analyzed. Unit <pg_lcell.28> generated.
+
+Analyzing generic Entity <pg_lcell.29> (Architecture <schematic>).
+	MASK = <u>1111001101010010
+
+	FF = 0
+
+Entity <pg_lcell.29> analyzed. Unit <pg_lcell.29> generated.
+
+Analyzing generic Entity <pg_lcell.30> (Architecture <schematic>).
+	MASK = <u>0000111100110111
+
+	FF = 0
+
+Entity <pg_lcell.30> analyzed. Unit <pg_lcell.30> generated.
+
+Analyzing generic Entity <pg_lcell.31> (Architecture <schematic>).
+	MASK = <u>0000000011110001
+
+	FF = 0
+
+Entity <pg_lcell.31> analyzed. Unit <pg_lcell.31> generated.
+
+Analyzing generic Entity <pg_lcell.32> (Architecture <schematic>).
+	MASK = <u>0000000000001111
+
+	FF = 0
+
+Entity <pg_lcell.32> analyzed. Unit <pg_lcell.32> generated.
+
+Analyzing generic Entity <pg_lcell.33> (Architecture <schematic>).
+	MASK = <u>0000000001000110
+
+	FF = 0
+
+Entity <pg_lcell.33> analyzed. Unit <pg_lcell.33> generated.
+
+Analyzing generic Entity <pg_lcell.34> (Architecture <schematic>).
+	MASK = <u>0000000000111110
+
+	FF = 0
+
+Entity <pg_lcell.34> analyzed. Unit <pg_lcell.34> generated.
+
+Analyzing generic Entity <pg_lcell.35> (Architecture <schematic>).
+	MASK = <u>0000000000000001
+
+	FF = 0
+
+Entity <pg_lcell.35> analyzed. Unit <pg_lcell.35> generated.
+
+Analyzing Entity <pg_log_unsigned_add_umult_6_9_2> (Architecture <rtl>).
+Entity <pg_log_unsigned_add_umult_6_9_2> analyzed. Unit <pg_log_unsigned_add_umult_6_9_2> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_11_0> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_11_0> analyzed. Unit <pg_adder_RCA_SUB_11_0> generated.
+
+Analyzing Entity <pg_adder_RCA_ADD_16_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_ADD_16_1> analyzed. Unit <pg_adder_RCA_ADD_16_1> generated.
+
+Analyzing generic Entity <pg_log_shift_m1> (Architecture <rtl>).
+	PG_WIDTH = 17
+
+Entity <pg_log_shift_m1> analyzed. Unit <pg_log_shift_m1> generated.
+
+Analyzing Entity <pg_log_mul_17_2> (Architecture <rtl>).
+Entity <pg_log_mul_17_2> analyzed. Unit <pg_log_mul_17_2> generated.
+
+Analyzing Entity <pg_adder_RCA_ADD_15_2> (Architecture <rtl>).
+Entity <pg_adder_RCA_ADD_15_2> analyzed. Unit <pg_adder_RCA_ADD_15_2> generated.
+
+Analyzing Entity <pg_log_sdiv_17_2> (Architecture <rtl>).
+Entity <pg_log_sdiv_17_2> analyzed. Unit <pg_log_sdiv_17_2> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_16_2> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_16_2> analyzed. Unit <pg_adder_RCA_SUB_16_2> generated.
+
+Analyzing Entity <pg_float_expadd_m31_17_8_1> (Architecture <rtl>).
+Entity <pg_float_expadd_m31_17_8_1> analyzed. Unit <pg_float_expadd_m31_17_8_1> generated.
+
+Analyzing Entity <pg_conv_ltof_17_8_57_5> (Architecture <rtl>).
+Entity <pg_conv_ltof_17_8_57_5> analyzed. Unit <pg_conv_ltof_17_8_57_5> generated.
+
+Analyzing Entity <bram_rom_8f28_8_8_1> (Architecture <rtl>).
+Entity <bram_rom_8f28_8_8_1> analyzed. Unit <bram_rom_8f28_8_8_1> generated.
+
+Analyzing Entity <reged_shift_ltof_9_7_56_3> (Architecture <rtl>).
+Entity <reged_shift_ltof_9_7_56_3> analyzed. Unit <reged_shift_ltof_9_7_56_3> generated.
+
+Analyzing Entity <pg_fix_smaccum_57_64_4> (Architecture <rtl>).
+Entity <pg_fix_smaccum_57_64_4> analyzed. Unit <pg_fix_smaccum_57_64_4> generated.
+
+Analyzing generic Entity <fix_accum_reg_1> (Architecture <rtl>).
+	WIDTH = 16
+
+WARNING:Xst:819 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd" line 3367: The following signals are missing in the process sensitivity list:
+   zeros.
+Entity <fix_accum_reg_1> analyzed. Unit <fix_accum_reg_1> generated.
+
+Analyzing generic Entity <fix_accum_reg_last_1> (Architecture <rtl>).
+	WIDTH = 16
+
+WARNING:Xst:819 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd" line 3451: The following signals are missing in the process sensitivity list:
+   zeros.
+Entity <fix_accum_reg_last_1> analyzed. Unit <fix_accum_reg_last_1> generated.
+
+Analyzing Entity <pg_pdelay_17_7> (Architecture <rtl>).
+Entity <pg_pdelay_17_7> analyzed. Unit <pg_pdelay_17_7> generated.
+
+Analyzing Entity <pg_pdelay_17_27> (Architecture <rtl>).
+Entity <pg_pdelay_17_27> analyzed. Unit <pg_pdelay_17_27> generated.
+
+Analyzing Entity <pg_pdelay_17_22> (Architecture <rtl>).
+Entity <pg_pdelay_17_22> analyzed. Unit <pg_pdelay_17_22> generated.
+
+Analyzing Entity <calc> (Architecture <rtl>).
+WARNING:Xst:819 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd" line 53: The following signals are missing in the process sensitivity list:
+   n.
+Entity <calc> analyzed. Unit <calc> generated.
+
+Analyzing Entity <pipe_sts> (Architecture <rtl>).
+Entity <pipe_sts> analyzed. Unit <pipe_sts> generated.
+
+Analyzing Entity <setn> (Architecture <rtl>).
+Entity <setn> analyzed. Unit <setn> generated.
+
+Analyzing Entity <jmem> (Architecture <rtl>).
+Entity <jmem> analyzed. Unit <jmem> generated.
+
+Analyzing Entity <dpram> (Architecture <rtl>).
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+WARNING:Xst:753 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Unconnected output port 'doa' of component 'RAMB16_S2_S2'.
+WARNING:Xst:766 - "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd" line 54: Generating a Black Box for component <RAMB16_S2_S2>.
+Entity <dpram> analyzed. Unit <dpram> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dpram>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/dpram.vhd".
+WARNING:Xst:647 - Input <radr<14:13>> is never used.
+WARNING:Xst:647 - Input <wadr<14:13>> is never used.
+Unit <dpram> synthesized.
+
+
+Synthesizing Unit <fix_accum_reg_last_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 16-bit subtractor for signal <$n0006> created at line 3455.
+    Found 16-bit adder for signal <$n0007>.
+    Found 16-bit register for signal <reg_vmp0>.
+    Found 1-bit register for signal <run1>.
+    Found 16-bit addsub for signal <sum>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <fix_accum_reg_last_1> synthesized.
+
+
+Synthesizing Unit <fix_accum_reg_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 1-bit register for signal <cout>.
+    Found 1-bit register for signal <addsubd>.
+    Found 17-bit addsub for signal <$n0003> created at line 3368.
+    Found 16-bit register for signal <reg_vmp0>.
+    Found 1-bit register for signal <run1>.
+    Found 17-bit addsub for signal <sum>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <fix_accum_reg_1> synthesized.
+
+
+Synthesizing Unit <reged_shift_ltof_9_7_56_3>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <control<6>> is never used.
+WARNING:Xst:646 - Signal <c5<4:0>> is assigned but never used.
+WARNING:Xst:1780 - Signal <o0> is never used or assigned.
+WARNING:Xst:646 - Signal <o6<71:64>> is assigned but never used.
+WARNING:Xst:646 - Signal <o6<7:0>> is assigned but never used.
+WARNING:Xst:1780 - Signal <o6d> is never used or assigned.
+    Found 6-bit register for signal <c3>.
+    Found 6-bit register for signal <c4>.
+    Found 6-bit register for signal <c5>.
+    Found 16-bit register for signal <o3d>.
+    Found 24-bit register for signal <o4d>.
+    Found 40-bit register for signal <o5d>.
+    Summary:
+	inferred  98 D-type flip-flop(s).
+Unit <reged_shift_ltof_9_7_56_3> synthesized.
+
+
+Synthesizing Unit <bram_rom_8f28_8_8_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 256x8-bit ROM for signal <$n0001> created at line 3148.
+    Found 8-bit register for signal <outdata>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bram_rom_8f28_8_8_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_16_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 16-bit register for signal <z>.
+    Found 8-bit subtractor for signal <$n0000> created at line 2617.
+    Found 8-bit register for signal <x1_1>.
+    Found 8-bit register for signal <y1_1>.
+    Found 9-bit subtractor for signal <z0_0>.
+    Found 9-bit register for signal <z0_1>.
+    Found 8-bit subtractor for signal <z1_1>.
+    Summary:
+	inferred  41 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <pg_adder_RCA_SUB_16_2> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_ADD_15_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 15-bit register for signal <z>.
+    Found 7-bit adder for signal <$n0000>.
+    Found 7-bit register for signal <x1_1>.
+    Found 7-bit register for signal <y1_1>.
+    Found 9-bit adder for signal <z0_0>.
+    Found 9-bit register for signal <z0_1>.
+    Found 7-bit adder for signal <z1_1>.
+    Summary:
+	inferred  38 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <pg_adder_RCA_ADD_15_2> synthesized.
+
+
+Synthesizing Unit <pg_lcell_34>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_34> synthesized.
+
+
+Synthesizing Unit <pg_lcell_33>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_33> synthesized.
+
+
+Synthesizing Unit <pg_lcell_32>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_32> synthesized.
+
+
+Synthesizing Unit <pg_lcell_31>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_31> synthesized.
+
+
+Synthesizing Unit <pg_lcell_30>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_30> synthesized.
+
+
+Synthesizing Unit <pg_lcell_29>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_29> synthesized.
+
+
+Synthesizing Unit <pg_lcell_28>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_28> synthesized.
+
+
+Synthesizing Unit <pg_lcell_27>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_27> synthesized.
+
+
+Synthesizing Unit <pg_lcell_26>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_26> synthesized.
+
+
+Synthesizing Unit <pg_lcell_25>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_25> synthesized.
+
+
+Synthesizing Unit <pg_lcell_24>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_24> synthesized.
+
+
+Synthesizing Unit <pg_lcell_23>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_23> synthesized.
+
+
+Synthesizing Unit <pg_lcell_22>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_22> synthesized.
+
+
+Synthesizing Unit <pg_lcell_21>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_21> synthesized.
+
+
+Synthesizing Unit <pg_lcell_20>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_20> synthesized.
+
+
+Synthesizing Unit <pg_lcell_19>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_19> synthesized.
+
+
+Synthesizing Unit <pg_lcell_18>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_18> synthesized.
+
+
+Synthesizing Unit <pg_lcell_17>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_17> synthesized.
+
+
+Synthesizing Unit <pg_lcell_16>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_16> synthesized.
+
+
+Synthesizing Unit <pg_lcell_15>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_15> synthesized.
+
+
+Synthesizing Unit <pg_lcell_14>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_14> synthesized.
+
+
+Synthesizing Unit <pg_lcell_13>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_13> synthesized.
+
+
+Synthesizing Unit <pg_lcell_12>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_12> synthesized.
+
+
+Synthesizing Unit <pg_lcell_11>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_11> synthesized.
+
+
+Synthesizing Unit <pg_lcell_10>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_10> synthesized.
+
+
+Synthesizing Unit <pg_lcell_9>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_9> synthesized.
+
+
+Synthesizing Unit <pg_lcell_8>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_8> synthesized.
+
+
+Synthesizing Unit <pg_lcell_7>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_7> synthesized.
+
+
+Synthesizing Unit <pg_lcell_6>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_6> synthesized.
+
+
+Synthesizing Unit <pg_lcell_5>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_5> synthesized.
+
+
+Synthesizing Unit <pg_lcell_4>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_4> synthesized.
+
+
+Synthesizing Unit <pg_lcell_3>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_3> synthesized.
+
+
+Synthesizing Unit <pg_lcell_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_2> synthesized.
+
+
+Synthesizing Unit <pg_lcell_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_1> synthesized.
+
+
+Synthesizing Unit <pg_lcell_0>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell_0> synthesized.
+
+
+Synthesizing Unit <pg_lcell>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_ADD_16_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 16-bit register for signal <z>.
+    Found 16-bit adder for signal <sum>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pg_adder_RCA_ADD_16_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_11_0>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 11-bit subtractor for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <pg_adder_RCA_SUB_11_0> synthesized.
+
+
+Synthesizing Unit <pg_log_unsigned_add_umult_6_9_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 15-bit register for signal <z>.
+    Found 15-bit adder for signal <s>.
+    Found 6x6-bit multiplier for signal <s0>.
+    Found 12-bit register for signal <s0d>.
+    Found 6x4-bit multiplier for signal <s1>.
+    Found 10-bit register for signal <s1d>.
+    Summary:
+	inferred  37 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+Unit <pg_log_unsigned_add_umult_6_9_2> synthesized.
+
+
+Synthesizing Unit <lcell_rom_a906_6_9_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:1780 - Signal <adr1<3:0>> is never used or assigned.
+WARNING:Xst:1780 - Signal <adr2<4:0>> is never used or assigned.
+    Found 1-bit register for signal <adr2<5>>.
+    Found 9-bit register for signal <lc_5_0>.
+    Found 9-bit register for signal <lc_5_1>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <lcell_rom_a906_6_9_1> synthesized.
+
+
+Synthesizing Unit <lcell_rom_a106_6_10_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:1780 - Signal <adr1<3:0>> is never used or assigned.
+WARNING:Xst:1780 - Signal <adr2<4:0>> is never used or assigned.
+    Found 1-bit register for signal <adr2<5>>.
+    Found 10-bit register for signal <lc_5_0>.
+    Found 10-bit register for signal <lc_5_1>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+Unit <lcell_rom_a106_6_10_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_16_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 16-bit register for signal <z>.
+    Found 16-bit subtractor for signal <sum>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pg_adder_RCA_SUB_16_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_17_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 17-bit register for signal <z>.
+    Found 17-bit subtractor for signal <sum>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pg_adder_RCA_SUB_17_1> synthesized.
+
+
+Synthesizing Unit <unreg_add_sub_0>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 5-bit adder for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <unreg_add_sub_0> synthesized.
+
+
+Synthesizing Unit <bram_rom_8408_10_8_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 1024x8-bit ROM for signal <$n0001> created at line 1475.
+    Found 8-bit register for signal <outdata>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bram_rom_8408_10_8_1> synthesized.
+
+
+Synthesizing Unit <unreg_shift_ftol_30_10>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 10-bit 16-to-1 multiplexer for signal <c0xxxx>.
+    Found 10-bit 16-to-1 multiplexer for signal <c1xxxx>.
+    Summary:
+	inferred  20 Multiplexer(s).
+Unit <unreg_shift_ftol_30_10> synthesized.
+
+
+Synthesizing Unit <penc_31_5>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <a<0>> is never used.
+Unit <penc_31_5> synthesized.
+
+
+Synthesizing Unit <unreg_add_sub>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 31-bit adder for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <unreg_add_sub> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_32_3>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:646 - Signal <z0_2<10>> is assigned but never used.
+    Found 32-bit register for signal <z>.
+    Found 11-bit subtractor for signal <$n0000> created at line 86.
+    Found 12-bit subtractor for signal <$n0001> created at line 85.
+    Found 11-bit register for signal <x1_1>.
+    Found 11-bit register for signal <x2_1>.
+    Found 11-bit register for signal <x2_2>.
+    Found 11-bit register for signal <y1_1>.
+    Found 11-bit register for signal <y2_1>.
+    Found 11-bit register for signal <y2_2>.
+    Found 11-bit subtractor for signal <z0_0>.
+    Found 11-bit register for signal <z0_1>.
+    Found 11-bit register for signal <z0_2>.
+    Found 12-bit subtractor for signal <z1_1>.
+    Found 12-bit register for signal <z1_2>.
+    Found 11-bit subtractor for signal <z2_2>.
+    Summary:
+	inferred 132 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+Unit <pg_adder_RCA_SUB_32_3> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_22>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 17-bit register for signal <x1>.
+    Found 17-bit register for signal <x10>.
+    Found 17-bit register for signal <x11>.
+    Found 17-bit register for signal <x12>.
+    Found 17-bit register for signal <x13>.
+    Found 17-bit register for signal <x14>.
+    Found 17-bit register for signal <x15>.
+    Found 17-bit register for signal <x16>.
+    Found 17-bit register for signal <x17>.
+    Found 17-bit register for signal <x18>.
+    Found 17-bit register for signal <x19>.
+    Found 17-bit register for signal <x2>.
+    Found 17-bit register for signal <x20>.
+    Found 17-bit register for signal <x21>.
+    Found 17-bit register for signal <x22>.
+    Found 17-bit register for signal <x3>.
+    Found 17-bit register for signal <x4>.
+    Found 17-bit register for signal <x5>.
+    Found 17-bit register for signal <x6>.
+    Found 17-bit register for signal <x7>.
+    Found 17-bit register for signal <x8>.
+    Found 17-bit register for signal <x9>.
+    Summary:
+	inferred 374 D-type flip-flop(s).
+Unit <pg_pdelay_17_22> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_27>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 17-bit register for signal <x1>.
+    Found 17-bit register for signal <x10>.
+    Found 17-bit register for signal <x11>.
+    Found 17-bit register for signal <x12>.
+    Found 17-bit register for signal <x13>.
+    Found 17-bit register for signal <x14>.
+    Found 17-bit register for signal <x15>.
+    Found 17-bit register for signal <x16>.
+    Found 17-bit register for signal <x17>.
+    Found 17-bit register for signal <x18>.
+    Found 17-bit register for signal <x19>.
+    Found 17-bit register for signal <x2>.
+    Found 17-bit register for signal <x20>.
+    Found 17-bit register for signal <x21>.
+    Found 17-bit register for signal <x22>.
+    Found 17-bit register for signal <x23>.
+    Found 17-bit register for signal <x24>.
+    Found 17-bit register for signal <x25>.
+    Found 17-bit register for signal <x26>.
+    Found 17-bit register for signal <x27>.
+    Found 17-bit register for signal <x3>.
+    Found 17-bit register for signal <x4>.
+    Found 17-bit register for signal <x5>.
+    Found 17-bit register for signal <x6>.
+    Found 17-bit register for signal <x7>.
+    Found 17-bit register for signal <x8>.
+    Found 17-bit register for signal <x9>.
+    Summary:
+	inferred 459 D-type flip-flop(s).
+Unit <pg_pdelay_17_27> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_7>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 17-bit register for signal <x1>.
+    Found 17-bit register for signal <x2>.
+    Found 17-bit register for signal <x3>.
+    Found 17-bit register for signal <x4>.
+    Found 17-bit register for signal <x5>.
+    Found 17-bit register for signal <x6>.
+    Found 17-bit register for signal <x7>.
+    Summary:
+	inferred 119 D-type flip-flop(s).
+Unit <pg_pdelay_17_7> synthesized.
+
+
+Synthesizing Unit <pg_fix_smaccum_57_64_4>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:646 - Signal <carry<0>> is assigned but never used.
+    Found 16-bit register for signal <fx_1_1>.
+    Found 16-bit register for signal <fx_2_1>.
+    Found 16-bit register for signal <fx_2_2>.
+    Found 16-bit register for signal <fx_3_1>.
+    Found 16-bit register for signal <fx_3_2>.
+    Found 16-bit register for signal <fx_3_3>.
+    Summary:
+	inferred  96 D-type flip-flop(s).
+Unit <pg_fix_smaccum_57_64_4> synthesized.
+
+
+Synthesizing Unit <pg_conv_ltof_17_8_57_5>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 57-bit register for signal <fixdata>.
+    Found 7-bit register for signal <exp1>.
+    Found 1-bit register for signal <nz1>.
+    Found 1-bit register for signal <sign1>.
+    Found 1-bit register for signal <sign2>.
+    Found 1-bit register for signal <sign3>.
+    Found 1-bit register for signal <sign4>.
+    Summary:
+	inferred  69 D-type flip-flop(s).
+Unit <pg_conv_ltof_17_8_57_5> synthesized.
+
+
+Synthesizing Unit <pg_float_expadd_m31_17_8_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:1780 - Signal <manz> is never used or assigned.
+    Found 17-bit register for signal <z>.
+    Found 8-bit adder for signal <expz0>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pg_float_expadd_m31_17_8_1> synthesized.
+
+
+Synthesizing Unit <pg_log_sdiv_17_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 2-bit register for signal <z<16:15>>.
+    Found 1-bit xor2 for signal <$n0001> created at line 2551.
+    Found 1-bit register for signal <nz0>.
+    Found 1-bit register for signal <sign0>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <pg_log_sdiv_17_2> synthesized.
+
+
+Synthesizing Unit <pg_log_mul_17_2>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+    Found 2-bit register for signal <z<16:15>>.
+    Found 1-bit xor2 for signal <$n0001> created at line 2453.
+    Found 1-bit register for signal <nz0>.
+    Found 1-bit register for signal <sign0>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <pg_log_mul_17_2> synthesized.
+
+
+Synthesizing Unit <pg_log_shift_m1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+WARNING:Xst:647 - Input <x<16>> is never used.
+WARNING:Xst:647 - Input <x<0>> is never used.
+Unit <pg_log_shift_m1> synthesized.
+
+
+Synthesizing Unit <pg_log_unsigned_add_itp_17_8_6_9>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:646 - Signal <itp_subz<1:0>> is assigned but never used.
+WARNING:Xst:646 - Signal <itp_c1dx<7:0>> is assigned but never used.
+    Found 17-bit register for signal <z>.
+    Found 16-bit register for signal <d1>.
+    Found 1-bit register for signal <d_isz1>.
+    Found 1-bit register for signal <d_isz2>.
+    Found 1-bit register for signal <d_isz3>.
+    Found 1-bit register for signal <d_isz4>.
+    Found 1-bit register for signal <d_isz5>.
+    Found 1-bit register for signal <df1>.
+    Found 1-bit register for signal <df2>.
+    Found 1-bit register for signal <df3>.
+    Found 1-bit register for signal <df4>.
+    Found 1-bit register for signal <df5>.
+    Found 10-bit register for signal <itp_c0d0>.
+    Found 10-bit register for signal <itp_c0d1>.
+    Found 10-bit register for signal <itp_c0d2>.
+    Found 10-bit register for signal <itp_c1dx2>.
+    Found 6-bit register for signal <itp_dx1>.
+    Found 8-bit register for signal <itp_out1>.
+    Found 1-bit register for signal <sign1>.
+    Found 1-bit register for signal <sign2>.
+    Found 1-bit register for signal <sign3>.
+    Found 1-bit register for signal <sign4>.
+    Found 1-bit register for signal <sign5>.
+    Found 1-bit register for signal <sign6>.
+    Found 1-bit register for signal <sign7>.
+    Found 1-bit register for signal <sign8>.
+    Found 16-bit register for signal <x3>.
+    Found 16-bit register for signal <x4>.
+    Found 16-bit register for signal <x5>.
+    Found 16-bit register for signal <x6>.
+    Found 16-bit register for signal <x7>.
+    Found 16-bit register for signal <x8>.
+    Found 16-bit register for signal <xd>.
+    Found 16-bit register for signal <yd>.
+    Summary:
+	inferred 233 D-type flip-flop(s).
+Unit <pg_log_unsigned_add_itp_17_8_6_9> synthesized.
+
+
+Synthesizing Unit <pg_log_shift_1>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+WARNING:Xst:647 - Input <x<16>> is never used.
+WARNING:Xst:647 - Input <x<14>> is never used.
+Unit <pg_log_shift_1> synthesized.
+
+
+Synthesizing Unit <pg_conv_ftol_32_17_8_4>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+WARNING:Xst:1780 - Signal <sign0r> is never used or assigned.
+WARNING:Xst:1780 - Signal <sign> is never used or assigned.
+    Found 2-bit register for signal <logdata<16:15>>.
+    Found 5-bit register for signal <logdata<12:8>>.
+    Found 5-bit register for signal <c2>.
+    Found 5-bit register for signal <c3>.
+    Found 31-bit register for signal <d3r>.
+    Found 30-bit register for signal <d4>.
+    Found 10-bit register for signal <d6>.
+    Found 1-bit register for signal <nz1>.
+    Found 1-bit register for signal <nz2>.
+    Found 1-bit register for signal <sign1>.
+    Found 1-bit register for signal <sign2>.
+    Found 1-bit register for signal <sign3>.
+    Summary:
+	inferred  93 D-type flip-flop(s).
+Unit <pg_conv_ftol_32_17_8_4> synthesized.
+
+
+Synthesizing Unit <pg_fix_sub_32_3>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_module.vhd".
+Unit <pg_fix_sub_32_3> synthesized.
+
+
+Synthesizing Unit <pipe>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd".
+WARNING:Xst:647 - Input <p_adrovp> is never used.
+WARNING:Xst:647 - Input <rst> is never used.
+WARNING:Xst:647 - Input <p_adrivp> is never used.
+WARNING:Xst:647 - Input <p_jdata<127:113>> is never used.
+    Found 64-bit register for signal <p_datao>.
+    Found 1-bit register for signal <p_runret>.
+    Found 64-bit 4-to-1 multiplexer for signal <$n0003> created at line 379.
+    Found 17-bit register for signal <ieps2>.
+    Found 17-bit register for signal <ireg_ieps2>.
+    Found 32-bit register for signal <ireg_xi_0>.
+    Found 32-bit register for signal <ireg_xi_1>.
+    Found 32-bit register for signal <ireg_xi_2>.
+    Found 46-bit register for signal <run>.
+    Found 32-bit register for signal <xi_0>.
+    Found 32-bit register for signal <xi_1>.
+    Found 32-bit register for signal <xi_2>.
+    Summary:
+	inferred 337 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <pipe> synthesized.
+
+
+Synthesizing Unit <jmem>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/jmem.vhd".
+WARNING:Xst:647 - Input <rst> is never used.
+WARNING:Xst:647 - Input <radr<0>> is never used.
+WARNING:Xst:1780 - Signal <adr1> is never used or assigned.
+WARNING:Xst:1780 - Signal <we2> is never used or assigned.
+WARNING:Xst:1780 - Signal <we3> is never used or assigned.
+WARNING:Xst:1780 - Signal <nadr1> is never used or assigned.
+Unit <jmem> synthesized.
+
+
+Synthesizing Unit <setn>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/setn.vhd".
+    Found 32-bit register for signal <nreg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <setn> synthesized.
+
+
+Synthesizing Unit <pipe_sts>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pipe_sts.vhd".
+WARNING:Xst:1780 - Signal <cntr> is never used or assigned.
+WARNING:Xst:1780 - Signal <sts> is never used or assigned.
+WARNING:Xst:1780 - Signal <sts_reg> is never used or assigned.
+    Register <status<1>> equivalent to <status<0>> has been removed
+    Register <status<2>> equivalent to <status<0>> has been removed
+    Register <status<3>> equivalent to <status<0>> has been removed
+    Register <status<4>> equivalent to <status<0>> has been removed
+    Register <status<5>> equivalent to <status<0>> has been removed
+    Register <status<6>> equivalent to <status<0>> has been removed
+    Register <status<7>> equivalent to <status<0>> has been removed
+    Found 1-bit register for signal <status<0>>.
+    Found 1-bit register for signal <irun>.
+    Found 1-bit register for signal <rund>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <pipe_sts> synthesized.
+
+
+Synthesizing Unit <calc>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/calc.vhd".
+WARNING:Xst:647 - Input <n<31:18>> is never used.
+WARNING:Xst:1780 - Signal <rstn<31:1>> is never used or assigned.
+    Found 1-bit register for signal <run>.
+    Found 18-bit down counter for signal <mema_dc>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <rstn<0>>.
+    Found 1-bit register for signal <start_r>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <calc> synthesized.
+
+
+Synthesizing Unit <pg_pipe>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pg_pipe.vhd".
+WARNING:Xst:1780 - Signal <runret<1>> is never used or assigned.
+WARNING:Xst:646 - Signal <u_adro> is assigned but never used.
+WARNING:Xst:1780 - Signal <we<1>> is never used or assigned.
+    Found 4x1-bit ROM for signal <we<0>>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <pg_pipe> synthesized.
+
+
+Synthesizing Unit <adr_dec>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/adr_dec.vhd".
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 2-bit comparator equal for signal <$n0005> created at line 53.
+    Found 2-bit comparator equal for signal <$n0007> created at line 43.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <adr_dec> synthesized.
+
+
+Synthesizing Unit <pgpg_mem>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/pgpg_mem/pgpg_mem.vhd".
+WARNING:Xst:1780 - Signal <jmem_adr> is never used or assigned.
+WARNING:Xst:1780 - Signal <ADR_ff> is never used or assigned.
+WARNING:Xst:1780 - Signal <odata_jmem> is never used or assigned.
+WARNING:Xst:1780 - Signal <debug_p_jdata> is never used or assigned.
+WARNING:Xst:646 - Signal <is_fo> is assigned but never used.
+WARNING:Xst:646 - Signal <odata_sts<31:1>> is assigned but never used.
+WARNING:Xst:646 - Signal <calc_jadr<31:16>> is assigned but never used.
+    Found 1-bit register for signal <STS>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <pgpg_mem> synthesized.
+
+
+Synthesizing Unit <dmaw_mem_we>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_we.vhd".
+    Found 1-bit register for signal <MEM_WE>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dmaw_mem_we> synthesized.
+
+
+Synthesizing Unit <dmaw_mem_adr>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_mem_adr.vhd".
+    Found 19-bit register for signal <MEM_ADR>.
+    Found 19-bit adder for signal <$n0003> created at line 57.
+    Found 19-bit register for signal <mem_adr_inc>.
+    Found 19-bit adder for signal <z>.
+    Summary:
+	inferred  38 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <dmaw_mem_adr> synthesized.
+
+
+Synthesizing Unit <dmaw_start_adr>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_start_adr.vhd".
+WARNING:Xst:647 - Input <DBUS<63:19>> is never used.
+    Found 19-bit register for signal <START_ADR>.
+    Found 19-bit 4-to-1 multiplexer for signal <$n0000>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred  19 Multiplexer(s).
+Unit <dmaw_start_adr> synthesized.
+
+
+Synthesizing Unit <dmaw_state>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw_state.vhd".
+    Found finite state machine <FSM_0> for signal <state_ff>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <dmaw_state> synthesized.
+
+
+Synthesizing Unit <dmar_dbus_hiz>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_dbus_hiz.vhd".
+    Found 1-bit register for signal <DBUS_HiZ>.
+    Found 1-bit register for signal <en0>.
+    Found 1-bit register for signal <en1>.
+    Found 1-bit register for signal <en2>.
+    Found 1-bit register for signal <en3>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <dmar_dbus_hiz> synthesized.
+
+
+Synthesizing Unit <dmar_mem_re>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_re.vhd".
+Unit <dmar_mem_re> synthesized.
+
+
+Synthesizing Unit <dmar_mem_adr>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_mem_adr.vhd".
+Unit <dmar_mem_adr> synthesized.
+
+
+Synthesizing Unit <dmar_start_adr>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_start_adr.vhd".
+Unit <dmar_start_adr> synthesized.
+
+
+Synthesizing Unit <dmar_state>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar_state.vhd".
+Unit <dmar_state> synthesized.
+
+
+Synthesizing Unit <user>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/user.vhd".
+WARNING:Xst:647 - Input <RE> is never used.
+Unit <user> synthesized.
+
+
+Synthesizing Unit <dmar>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmar.vhd".
+Unit <dmar> synthesized.
+
+
+Synthesizing Unit <dmaw>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/dmaw.vhd".
+WARNING:Xst:1780 - Signal <we> is never used or assigned.
+WARNING:Xst:646 - Signal <ena4> is assigned but never used.
+    Found 19-bit register for signal <MEM_ADR>.
+    Found 64-bit register for signal <MEM_DATA>.
+    Found 1-bit register for signal <MEM_WE>.
+    Found 19-bit 4-to-1 multiplexer for signal <$n0002>.
+    Found 19-bit adder for signal <$n0003> created at line 69.
+    Found 19-bit register for signal <acnt>.
+    Found 1-bit register for signal <ena1>.
+    Summary:
+	inferred 104 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 Multiplexer(s).
+Unit <dmaw> synthesized.
+
+
+Synthesizing Unit <CLK_MULDIV>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/clk_muldiv.vhd".
+Unit <CLK_MULDIV> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "/home/hamada/progrape/demo/grav1/pgr/ISE_PROJECT/top.vhd".
+WARNING:Xst:1778 - Inout <FPGA_NO<2>> is assigned but never used.
+WARNING:Xst:1779 - Inout <FPGA_NO<1:0>> is used but is never assigned.
+WARNING:Xst:1778 - Inout <CBUS<7:2>> is assigned but never used.
+WARNING:Xst:1779 - Inout <CBUS<1:0>> is used but is never assigned.
+    Found 1-bit tristate buffer for signal <CK133>.
+    Found 5-bit tristate buffer for signal <CBUS<6:2>>.
+    Found 64-bit tristate buffer for signal <DBUS>.
+    Found 1-bit tristate buffer for signal <FPGA_NO<2>>.
+    Found 64-bit register for signal <DBUS_Port_ff>.
+    Found 2-bit register for signal <FPGA_NO_ff>.
+    Found 4-bit register for signal <LED_ff>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+	inferred  71 Tristate(s).
+Unit <top> synthesized.
+
+INFO:Xst:2182 - Always blocking tristate <FPGA_NO<2>> in unit <top> is removed.
+INFO:Xst:2182 - Always blocking tristate <CBUS<2>> in unit <top> is removed.
+INFO:Xst:2182 - Always blocking tristate <CBUS<3>> in unit <top> is removed.
+INFO:Xst:2182 - Always blocking tristate <CBUS<4>> in unit <top> is removed.
+INFO:Xst:2182 - Always blocking tristate <CBUS<5>> in unit <top> is removed.
+INFO:Xst:2182 - Always blocking tristate <CBUS<6>> in unit <top> is removed.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 7
+ 1024x8-bit ROM                                        : 3
+ 256x8-bit ROM                                         : 3
+ 4x1-bit ROM                                           : 1
+# Multipliers                                          : 6
+ 6x4-bit multiplier                                    : 3
+ 6x6-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 84
+ 11-bit subtractor                                     : 12
+ 12-bit subtractor                                     : 6
+ 15-bit adder                                          : 3
+ 16-bit adder                                          : 6
+ 16-bit addsub                                         : 3
+ 16-bit subtractor                                     : 6
+ 17-bit addsub                                         : 18
+ 17-bit subtractor                                     : 3
+ 19-bit adder                                          : 3
+ 31-bit adder                                          : 3
+ 5-bit adder                                           : 3
+ 7-bit adder                                           : 8
+ 8-bit adder                                           : 3
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 4
+ 9-bit subtractor                                      : 1
+# Counters                                             : 1
+ 18-bit down counter                                   : 1
+# Registers                                            : 929
+ 1-bit register                                        : 618
+ 10-bit register                                       : 24
+ 11-bit register                                       : 24
+ 12-bit register                                       : 6
+ 15-bit register                                       : 3
+ 16-bit register                                       : 66
+ 17-bit register                                       : 108
+ 19-bit register                                       : 5
+ 2-bit register                                        : 1
+ 24-bit register                                       : 3
+ 30-bit register                                       : 3
+ 31-bit register                                       : 3
+ 32-bit register                                       : 7
+ 4-bit register                                        : 1
+ 40-bit register                                       : 3
+ 5-bit register                                        : 6
+ 6-bit register                                        : 12
+ 64-bit register                                       : 3
+ 7-bit register                                        : 11
+ 8-bit register                                        : 11
+ 9-bit register                                        : 11
+# Comparators                                          : 2
+ 2-bit comparator equal                                : 2
+# Multiplexers                                         : 9
+ 10-bit 16-to-1 multiplexer                            : 6
+ 19-bit 4-to-1 multiplexer                             : 2
+ 64-bit 4-to-1 multiplexer                             : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 1
+ 64-bit tristate buffer                                : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:1647 - Data output of ROM <Mrom__n0001> in block <bram_rom_8408_10_8_1> is tied to register <outdata> in block <bram_rom_8408_10_8_1>.
+INFO:Xst:1650 - The register is removed and the ROM is implemented as read-only block RAM.
+INFO:Xst:1647 - Data output of ROM <Mrom__n0001> in block <bram_rom_8f28_8_8_1> is tied to register <outdata> in block <bram_rom_8f28_8_8_1>.
+INFO:Xst:1650 - The register is removed and the ROM is implemented as read-only block RAM.
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <u1/u0/u0/state_ff> on signal <state_ff[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+WARNING:Xst:2404 -  FFs/Latches <fx_3_1<15:8>> (without init value) have a constant value of 0 in block <pg_fix_smaccum_57_64_4>.
+WARNING:Xst:2404 -  FFs/Latches <lc_5_1<9:3>> (without init value) have a constant value of 0 in block <lcell_rom_a106_6_10_1>.
+WARNING:Xst:2404 -  FFs/Latches <lc_5_1<8:3>> (without init value) have a constant value of 0 in block <lcell_rom_a906_6_9_1>.
+WARNING:Xst:2404 -  FFs/Latches <itp_c1dx2<9:7>> (without init value) have a constant value of 0 in block <pg_log_unsigned_add_itp_17_8_6_9>.
+WARNING:Xst:2404 -  FFs/Latches <fx_3_2<15:8>> (without init value) have a constant value of 0 in block <pg_fix_smaccum_57_64_4>.
+WARNING:Xst:2404 -  FFs/Latches <fx_3_3<15:8>> (without init value) have a constant value of 0 in block <pg_fix_smaccum_57_64_4>.
+
+Synthesizing (advanced) Unit <dmar_dbus_hiz>.
+	Found 2-bit shift register for signal <en1>.
+Unit <dmar_dbus_hiz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pg_adder_RCA_ADD_15_2>.
+	Found 2-bit shift register for signal <z<2>>.
+	Found 2-bit shift register for signal <z<0>>.
+	Found 2-bit shift register for signal <z<1>>.
+	Found 2-bit shift register for signal <z<3>>.
+	Found 2-bit shift register for signal <z<4>>.
+	Found 2-bit shift register for signal <z<7>>.
+	Found 2-bit shift register for signal <z<5>>.
+	Found 2-bit shift register for signal <z<6>>.
+Unit <pg_adder_RCA_ADD_15_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pg_adder_RCA_SUB_16_2>.
+	Found 2-bit shift register for signal <z<2>>.
+	Found 2-bit shift register for signal <z<0>>.
+	Found 2-bit shift register for signal <z<1>>.
+	Found 2-bit shift register for signal <z<3>>.
+	Found 2-bit shift register for signal <z<4>>.
+	Found 2-bit shift register for signal <z<7>>.
+	Found 2-bit shift register for signal <z<5>>.
+	Found 2-bit shift register for signal <z<6>>.
+Unit <pg_adder_RCA_SUB_16_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pg_adder_RCA_SUB_32_3>.
+	Found 2-bit shift register for signal <y2_2<0>>.
+	Found 2-bit shift register for signal <y2_2<1>>.
+	Found 2-bit shift register for signal <y2_2<2>>.
+	Found 2-bit shift register for signal <y2_2<3>>.
+	Found 2-bit shift register for signal <y2_2<4>>.
+	Found 2-bit shift register for signal <y2_2<5>>.
+	Found 2-bit shift register for signal <y2_2<6>>.
+	Found 2-bit shift register for signal <y2_2<7>>.
+	Found 2-bit shift register for signal <y2_2<8>>.
+	Found 2-bit shift register for signal <y2_2<9>>.
+	Found 2-bit shift register for signal <y2_2<10>>.
+	Found 2-bit shift register for signal <x2_2<0>>.
+	Found 2-bit shift register for signal <x2_2<1>>.
+	Found 2-bit shift register for signal <x2_2<2>>.
+	Found 2-bit shift register for signal <x2_2<3>>.
+	Found 2-bit shift register for signal <x2_2<4>>.
+	Found 2-bit shift register for signal <x2_2<5>>.
+	Found 2-bit shift register for signal <x2_2<6>>.
+	Found 2-bit shift register for signal <x2_2<7>>.
+	Found 2-bit shift register for signal <x2_2<8>>.
+	Found 2-bit shift register for signal <x2_2<9>>.
+	Found 2-bit shift register for signal <x2_2<10>>.
+	Found 3-bit shift register for signal <z<1>>.
+	Found 3-bit shift register for signal <z<0>>.
+	Found 3-bit shift register for signal <z<2>>.
+	Found 3-bit shift register for signal <z<3>>.
+	Found 3-bit shift register for signal <z<4>>.
+	Found 3-bit shift register for signal <z<5>>.
+	Found 3-bit shift register for signal <z<8>>.
+	Found 3-bit shift register for signal <z<6>>.

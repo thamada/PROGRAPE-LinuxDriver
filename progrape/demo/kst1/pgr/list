@@ -1,0 +1,49 @@
+/*
+  Time-stamp: <2006-08-25 15:36:34 hamada>
+  PGRDL source for the Kolmogorov-Smirnov Test
+  by T.Hamada
+*/
+ 
+/* -------------------------------------------------------- MACRO */
+#define NFLO 26
+#define NMAN 16
+#define NFIX 57
+#define NACC 64
+
+//================================================================== 
+#define NST_CMP   2
+#define NST_ACC   4
+
+/* ------------------------------------------------ I/O DEFINITION */
+/MEM xj[2]  <= data_j[][]  : float(NFLO, NMAN);
+/REG xi[2]  <= data_i[][]  : float(NFLO, NMAN);
+/REG sx[4]  => count_i[][] : fix(NACC);
+
+/CONST zero <= 0.0 : float(56,16);
+
+/* ------------------------------------------ NUMBER OF PIPELINES  */
+/NPIPE 1;
+/NVMP  1;
+
+/* -------------------------------------------- PIPELINE DATA FLOW */
+pg_float_compare  (xj[0],xi[0], y_x,     NFLO,NMAN,NST_CMP);     // y_x : (xj[0]>xi[0]) ? 1 : 0;
+pg_float_compare  (xj[1],xi[1], y_y,     NFLO,NMAN,NST_CMP);     // y_y : (xj[1]>xi[1]) ? 1 : 0;
+
+pg_bits_inv(y_x, n_x, 1);
+pg_bits_inv(y_y, n_y, 1);
+
+pg_bits_and(y_x, y_y, qq0, 1);
+pg_bits_and(y_x, n_y, qq1, 1);
+pg_bits_and(n_x, y_y, qq2, 1);
+pg_bits_and(n_x, n_y, qq3, 1);
+
+pg_bits_join(zero, qq0, q0, 56, 1);
+pg_bits_join(zero, qq1, q1, 56, 1);
+pg_bits_join(zero, qq2, q2, 56, 1);
+pg_bits_join(zero, qq3, q3, 56, 1);
+
+pg_fix_smaccum(q0, sx[0], NFIX, NACC, NST_ACC);
+pg_fix_smaccum(q1, sx[1], NFIX, NACC, NST_ACC);
+pg_fix_smaccum(q2, sx[2], NFIX, NACC, NST_ACC);
+pg_fix_smaccum(q3, sx[3], NFIX, NACC, NST_ACC);
+

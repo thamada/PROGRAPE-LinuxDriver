@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 8.1.03i Trace I.27
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+trce -intstyle xflow -e 30 -l 3 -s 5 top.ncd -o top.twr top.pcf
+
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,speed:             xc3s5000,-5 (ADVANCED 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_CK66 = PERIOD TIMEGRP "CK66" 15 ns HIGH 50%;
+
+ 0 items analyzed, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm0_dcm_out = PERIOD TIMEGRP "dcm0_dcm_out" TS_CK66 HIGH 50%;
+
+ 3690 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  14.559ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm0_dcm_fx = PERIOD TIMEGRP "dcm0_dcm_fx" TS_CK66 HIGH 50%;
+
+ 1234 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   9.275ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CK66
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CK66           |   14.559|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 4924 paths, 0 nets, and 2782 connections
+
+Design statistics:
+   Minimum period:  14.559ns (Maximum frequency:  68.686MHz)
+
+
+Analysis completed Mon Nov 20 23:12:40 2006
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 148 MB

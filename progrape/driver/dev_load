@@ -1,0 +1,168 @@
+#!/usr/bin/perl
+# Copyright 2006-2007 (c) by Tsuyoshi Hamada, All rights reserved.
+
+my $debug = 0; # (0 :non debug mode )/(not 0 : debug)
+
+my $module = "progrape";
+my $device = "progrape";
+my $mode   = "664";
+
+my $ndev = &get_number_of_device();
+&cout("nubmer of devices = $ndev");
+
+# Group: since distributions do it differently, look for wheel or use staff
+my $group = &get_group();
+
+# invoke insmod with all arguments we got
+# and use a pathname, as insmod doesn't look in . by default
+my $cmd;
+my $args = &get_argstring(\@ARGV);
+$cmd = "/sbin/insmod ./". $module.".ko ". $args ."|| exit 1";
+&exeo($cmd);
+
+
+# retrieve major number
+my $major = &get_major();
+
+
+# Remove stale nodes and replace them, then give gid and perms
+# Usually the script is shorter, it's progrape that has several devices in it.
+# ------------------------------------------------------------------------------------ PCI-64/66 
+$cmd = "rm -f /dev/". $device ."[0-9]";         &exeo($cmd);
+my $minor = 0;
+for(my $i=0;$i<$ndev;$i++){
+    $cmd = "mknod /dev/". $device . sprintf("%d",$i) ." c $major ". sprintf("%d",$i);
+    &exeo($cmd);
+    $minor = $i;
+}
+$cmd = "ln -sf ". $device. "0 /dev/". $device;   &exeo($cmd);
+$cmd = "chgrp $group /dev/". $device ."[0-".sprintf("%d",$ndev-1)."]";   &exeo($cmd);
+$cmd = "chmod $mode  /dev/". $device ."[0-".sprintf("%d",$ndev-1)."]";   &exeo($cmd);
+
+# ------------------------------------------------------------------------------------ PCI-X 
+$cmd = "rm -f /dev/". $device ."_pcix[0-9]";    &exeo($cmd);
+for(my $i=0;$i<$ndev;$i++){
+    $cmd = "mknod /dev/". $device ."_pcix". sprintf("%d",$i) ." c $major ". sprintf("%d",$i+$minor+1);
+    &exeo($cmd);
+}
+$cmd = "ln -sf ". $device ."_pcix0 /dev/". $device ."_pcix"; &exeo($cmd);
+$cmd = "chgrp $group /dev/". $device ."_pcix[0-".sprintf("%d",$ndev-1)."]";  &exeo($cmd);
+$cmd = "chmod $mode  /dev/". $device ."_pcix[0-".sprintf("%d",$ndev-1)."]";  &exeo($cmd);
+
+
+1;
+
+#--------------------------------------------
+sub get_number_of_device
+{
+    my $ret;
+    my $file = "progrape.h";
+    open(RD,"$file");
+    while(<RD>){
+	my $s = $_;
+	chomp($s);
+	if(($s =~ /define/) && ($s =~ /PROGRAPE_NR_DEVS/)){
+	    my $l = $s;
+	    $s =~ s/\s//g;
+	    $s =~ s/\#definePROGRAPE_NR_DEVS//g;
+	    $ret = $s;
+	}
+    }
+    if($ret < 1){
+	&cerr("The number of character devices can't be not found at $file.");
+	exit(-1);
+    }
+    return ($ret);
+}
+
+sub get_group
+{
+    my $group = "staff";
+    open(RD,"/etc/group");
+    my $is_found=0;
+    while(<RD>){
+	my $s = $_;
+	chomp($s);
+	if($s =~ /^staff/){
+	    $is_found = 1;
+	}
+    }
+    close(RD);
+
+    if($is_found == 0){
+	$group="wheel";
+	&cerr("set group as '$group'.");
+    }
+
+    $group = "users";
+    return ($group);
+}
+
+
+sub get_argstring
+{
+    my ($a_ref) = shift;
+    my @as = @{$a_ref};
+    my $args = '';
+    for(my $i=0;$i<@as;$i++){ $args .= " " . $as[$i] ." "; }
+    return ($args);
+}
+
+sub get_major
+{
+    my $file = "/proc/devices";
+    my $major = 0;
+    open(RD,"$file");
+    while(<RD>){
+	my $s = $_;
+	chomp($s);
+	my @cell = split(/\s/,$s);
+	if($cell[1] eq $module){
+	    $major = $cell[0];
+	    cout("found $module (major $major) in $file.");
+	}
+    }
+    if($major == 0){
+	print STDERR "$module does not exists in /proc/devices\n";
+	exit(-1);
+    }
+    return ($major);
+}
+
+
+sub cout
+{
+    my ($msg) = shift;
+    print STDOUT "MESSAGE: ". $msg ."\n";
+}
+
+sub cerr
+{
+    my ($msg) = shift;
+    print STDERR $msg ."\n";
+}
+
+sub exeo{
+    my ($cmd) = shift;
+    if($debug){
+	&exeo_dummy($cmd);
+    }else{
+	&exeo_real($cmd);
+    }
+}
+
+sub exeo_real
+{
+    my ($cmd) = shift;
+    print "/bin/sh: ". $cmd. "\n";
+    my $exe = `$cmd`;
+    if($exe ne ''){ &cerr($exe); }
+}
+
+sub exeo_dummy
+{
+    my ($cmd) = shift;
+    print "nEXEC: ". $cmd. "\n";
+}
+
+1;

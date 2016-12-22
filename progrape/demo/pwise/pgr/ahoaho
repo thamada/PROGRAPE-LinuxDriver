@@ -1,0 +1,4 @@
+    if (_y > _x){
+	_z = 0;
+	fprintf(stderr,"%x\t%x\n",_x,_y);
+    }

@@ -1,0 +1,16 @@
+#!/bin/sh
+module="progrape"
+device="progrape"
+
+# invoke rmmod with all arguments we got
+/sbin/rmmod $module $* || exit 1
+
+# Remove stale nodes
+
+rm -f /dev/${device} /dev/${device}[0-9] 
+rm -f /dev/${device}_pcix /dev/${device}_pcix[0-9]
+
+
+
+
+

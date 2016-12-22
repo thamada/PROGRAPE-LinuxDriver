@@ -1,0 +1,15 @@
+#!/usr/bin/gnuplot
+
+
+
+set log y
+set log x
+
+#set term tgif
+#set output "out.obj"
+plot [0.01:100.0] "x~" with po 3
+
+set term X11
+replot
+
+pause -1

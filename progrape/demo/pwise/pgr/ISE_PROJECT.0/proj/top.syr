@@ -1,0 +1,1653 @@
+Release 6.2.03i - xst G.31a
+Copyright (c) 1995-2004 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.78 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.78 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : top.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : top
+Output Format                      : NGC
+Target Device                      : xc2vp70-5-ff1517
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : top.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : No
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd in Library work.
+Entity <dpram> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd in Library work.
+Entity <pg_fix_sub_32_1> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_SUB_32_1> (Architecture <rtl>) compiled.
+Entity <pg_conv_ftol_32_17_8_2> (Architecture <rtl>) compiled.
+Entity <unreg_add_sub> (Architecture <rtl>) compiled.
+Entity <penc_31_5> (Architecture <rtl>) compiled.
+Entity <unreg_shift_ftol_30_10> (Architecture <rtl>) compiled.
+Entity <bram_rom_8408_10_8_1> (Architecture <rtl>) compiled.
+Entity <pg_log_shift_1> (Architecture <rtl>) compiled.
+Entity <pg_log_unsigned_add_itp_17_8_6_4> (Architecture <rtl>) compiled.
+Entity <lcell_rom_a106_6_10_1> (Architecture <rtl>) compiled.
+Entity <lcell_rom_a906_6_9_1> (Architecture <rtl>) compiled.
+Entity <pg_log_unsigned_add_umult_6_9_0> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_SUB_17_0> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_SUB_16_0> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_SUB_11_0> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_ADD_16_0> (Architecture <rtl>) compiled.
+Entity <pg_log_shift_m1> (Architecture <rtl>) compiled.
+Entity <pg_log_mul_17_1> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_ADD_15_1> (Architecture <rtl>) compiled.
+Entity <pg_log_sdiv_17_1> (Architecture <rtl>) compiled.
+Entity <pg_adder_RCA_SUB_16_1> (Architecture <rtl>) compiled.
+Entity <pg_float_expadd_m31_17_8_1> (Architecture <rtl>) compiled.
+Entity <pg_conv_ltof_17_8_57_2> (Architecture <rtl>) compiled.
+Entity <unreg_shift_ltof_9_7_56> (Architecture <rtl>) compiled.
+Entity <bram_rom_8f28_8_8_1> (Architecture <rtl>) compiled.
+Entity <pg_fix_accum_57_64_1> (Architecture <rtl>) compiled.
+Entity <fix_accum_reg_last_1> (Architecture <rtl>) compiled.
+Entity <pg_pdelay_17_3> (Architecture <rtl>) compiled.
+Entity <pg_pdelay_17_12> (Architecture <rtl>) compiled.
+Entity <pg_pdelay_17_10> (Architecture <rtl>) compiled.
+Entity <pg_lcell> (Architecture <schematic>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/adr_dec.vhd in Library work.
+Entity <adr_dec> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_pipe.vhd in Library work.
+Entity <pg_pipe> (Architecture <std>) compiled.
+Entity <pipe> (Architecture <std>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/calc.vhd in Library work.
+Entity <calc> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pipe_sts.vhd in Library work.
+Entity <pipe_sts> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/setn.vhd in Library work.
+Entity <setn> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/jmem.vhd in Library work.
+Entity <jmem> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_mem_we.vhd in Library work.
+Entity <dmaw_mem_we> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_mem_adr.vhd in Library work.
+Entity <dmaw_mem_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_start_adr.vhd in Library work.
+Entity <dmaw_start_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_state.vhd in Library work.
+Entity <dmaw_state> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pgpg_mem.vhd in Library work.
+Entity <pgpg_mem> (Architecture <RTL>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_state.vhd in Library work.
+Entity <dmar_state> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_start_adr.vhd in Library work.
+Entity <dmar_start_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_mem_adr.vhd in Library work.
+Entity <dmar_mem_adr> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_mem_re.vhd in Library work.
+Entity <dmar_mem_re> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_dbus_hiz.vhd in Library work.
+Entity <dmar_dbus_hiz> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd in Library work.
+Entity <CLK_MULDIV> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw.vhd in Library work.
+Entity <dmaw> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar.vhd in Library work.
+Entity <dmar> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../user.vhd in Library work.
+Entity <user> (Architecture <rtl>) compiled.
+Compiling vhdl file /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../top.vhd in Library work.
+Entity <top> (Architecture <rtl>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> (Architecture <rtl>).
+INFO:Xst:1304 - Contents of register <TPIN<9>> in unit <top> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <TPIN<8>> in unit <top> never changes during circuit operation. The register is replaced by logic.
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing generic Entity <CLK_MULDIV> (Architecture <rtl>).
+	CLKFX_MULTIPLY = 2
+	CLKFX_DIVIDE = 2
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLK90' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLK180' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLK270' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLK2X' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLK2X180' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLKDV' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'CLKFX180' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'PSDONE' of component 'DCM'.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Unconnected output port 'STATUS' of component 'DCM'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 90: Generating a Black Box for component <DCM>.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 108: Generating a Black Box for component <IBUFG>.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 109: Generating a Black Box for component <BUFG>.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd line 110: Generating a Black Box for component <BUFG>.
+Entity <CLK_MULDIV> analyzed. Unit <CLK_MULDIV> generated.
+
+Analyzing Entity <dmaw> (Architecture <rtl>).
+Entity <dmaw> analyzed. Unit <dmaw> generated.
+
+Analyzing Entity <dmar> (Architecture <rtl>).
+Entity <dmar> analyzed. Unit <dmar> generated.
+
+Analyzing Entity <dmar_state> (Architecture <rtl>).
+Entity <dmar_state> analyzed. Unit <dmar_state> generated.
+
+Analyzing Entity <dmaw_state> (Architecture <rtl>).
+Entity <dmaw_state> analyzed. Unit <dmaw_state> generated.
+
+Analyzing Entity <dmar_start_adr> (Architecture <rtl>).
+Entity <dmar_start_adr> analyzed. Unit <dmar_start_adr> generated.
+
+Analyzing Entity <dmaw_start_adr> (Architecture <rtl>).
+Entity <dmaw_start_adr> analyzed. Unit <dmaw_start_adr> generated.
+
+Analyzing Entity <dmar_mem_adr> (Architecture <rtl>).
+Entity <dmar_mem_adr> analyzed. Unit <dmar_mem_adr> generated.
+
+Analyzing Entity <dmaw_mem_adr> (Architecture <rtl>).
+Entity <dmaw_mem_adr> analyzed. Unit <dmaw_mem_adr> generated.
+
+Analyzing Entity <dmar_mem_re> (Architecture <rtl>).
+Entity <dmar_mem_re> analyzed. Unit <dmar_mem_re> generated.
+
+Analyzing Entity <dmaw_mem_we> (Architecture <rtl>).
+Entity <dmaw_mem_we> analyzed. Unit <dmaw_mem_we> generated.
+
+Analyzing Entity <dmar_dbus_hiz> (Architecture <rtl>).
+Entity <dmar_dbus_hiz> analyzed. Unit <dmar_dbus_hiz> generated.
+
+Analyzing Entity <user> (Architecture <rtl>).
+Entity <user> analyzed. Unit <user> generated.
+
+Analyzing Entity <pgpg_mem> (Architecture <rtl>).
+Entity <pgpg_mem> analyzed. Unit <pgpg_mem> generated.
+
+Analyzing Entity <adr_dec> (Architecture <rtl>).
+WARNING:Xst:819 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/adr_dec.vhd line 42: The following signals are missing in the process sensitivity list:
+   FPGA_NO.
+WARNING:Xst:819 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/adr_dec.vhd line 51: The following signals are missing in the process sensitivity list:
+   FPGA_NO.
+Entity <adr_dec> analyzed. Unit <adr_dec> generated.
+
+Analyzing generic Entity <pg_pipe> (Architecture <std>).
+	JDATA_WIDTH = 128
+	IDATA_WIDTH = 64
+Entity <pg_pipe> analyzed. Unit <pg_pipe> generated.
+
+Analyzing generic Entity <pipe> (Architecture <std>).
+	JDATA_WIDTH = 128
+	IDATA_WIDTH = 64
+Entity <pipe> analyzed. Unit <pipe> generated.
+
+Analyzing Entity <pg_fix_sub_32_1> (Architecture <rtl>).
+Entity <pg_fix_sub_32_1> analyzed. Unit <pg_fix_sub_32_1> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_32_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_32_1> analyzed. Unit <pg_adder_RCA_SUB_32_1> generated.
+
+Analyzing Entity <pg_conv_ftol_32_17_8_2> (Architecture <rtl>).
+Entity <pg_conv_ftol_32_17_8_2> analyzed. Unit <pg_conv_ftol_32_17_8_2> generated.
+
+Analyzing generic Entity <unreg_add_sub> (Architecture <rtl>).
+	WIDTH = 31
+	DIRECTION = "ADD"
+Entity <unreg_add_sub> analyzed. Unit <unreg_add_sub> generated.
+
+Analyzing Entity <penc_31_5> (Architecture <rtl>).
+Entity <penc_31_5> analyzed. Unit <penc_31_5> generated.
+
+Analyzing Entity <unreg_shift_ftol_30_10> (Architecture <rtl>).
+Entity <unreg_shift_ftol_30_10> analyzed. Unit <unreg_shift_ftol_30_10> generated.
+
+Analyzing Entity <bram_rom_8408_10_8_1> (Architecture <rtl>).
+Entity <bram_rom_8408_10_8_1> analyzed. Unit <bram_rom_8408_10_8_1> generated.
+
+Analyzing generic Entity <unreg_add_sub> (Architecture <rtl>).
+	WIDTH = 5
+	DIRECTION = "ADD"
+Entity <unreg_add_sub> analyzed. Unit <unreg_add_sub0> generated.
+
+Analyzing generic Entity <pg_log_shift_1> (Architecture <rtl>).
+	PG_WIDTH = 17
+Entity <pg_log_shift_1> analyzed. Unit <pg_log_shift_1> generated.
+
+Analyzing Entity <pg_log_unsigned_add_itp_17_8_6_4> (Architecture <rtl>).
+Entity <pg_log_unsigned_add_itp_17_8_6_4> analyzed. Unit <pg_log_unsigned_add_itp_17_8_6_4> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_17_0> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_17_0> analyzed. Unit <pg_adder_RCA_SUB_17_0> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_16_0> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_16_0> analyzed. Unit <pg_adder_RCA_SUB_16_0> generated.
+
+Analyzing Entity <lcell_rom_a106_6_10_1> (Architecture <rtl>).
+Entity <lcell_rom_a106_6_10_1> analyzed. Unit <lcell_rom_a106_6_10_1> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0110001100000101
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1011000001110001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell1> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0101100001110111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell2> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1101101101000001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell3> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0110011001011101
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell4> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1101010001001001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell5> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1100110100010001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell6> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0011110011001011
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell7> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000001111000111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell8> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000111111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell9> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1001001110010011
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell10> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1011101110101010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell11> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1000100100111000
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell12> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0111100010010011
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell13> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000011110001001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell14> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000001111000
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell15> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000000111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell16> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000011010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell17> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000001111001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell18> generated.
+
+Analyzing Entity <lcell_rom_a906_6_9_1> (Architecture <rtl>).
+Entity <lcell_rom_a906_6_9_1> analyzed. Unit <lcell_rom_a906_6_9_1> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1101110101100100
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell19> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0010111101011111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell20> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0100011110100010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell21> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0111110111101011
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell22> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0010100111100110
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell23> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0001101101001011
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell24> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1111100011011001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell25> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000011111000111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell26> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0101100010010010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell27> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0011010100001010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell28> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>1111001101010010
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell29> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000111100110111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell30> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000011110001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell31> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000001111
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell32> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000001000110
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell33> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000111110
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell34> generated.
+
+Analyzing generic Entity <pg_lcell> (Architecture <schematic>).
+	MASK = <u>0000000000000001
+	FF = 0
+Entity <pg_lcell> analyzed. Unit <pg_lcell35> generated.
+
+Analyzing Entity <pg_log_unsigned_add_umult_6_9_0> (Architecture <rtl>).
+Entity <pg_log_unsigned_add_umult_6_9_0> analyzed. Unit <pg_log_unsigned_add_umult_6_9_0> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_11_0> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_11_0> analyzed. Unit <pg_adder_RCA_SUB_11_0> generated.
+
+Analyzing Entity <pg_adder_RCA_ADD_16_0> (Architecture <rtl>).
+Entity <pg_adder_RCA_ADD_16_0> analyzed. Unit <pg_adder_RCA_ADD_16_0> generated.
+
+Analyzing generic Entity <pg_log_shift_m1> (Architecture <rtl>).
+	PG_WIDTH = 17
+Entity <pg_log_shift_m1> analyzed. Unit <pg_log_shift_m1> generated.
+
+Analyzing Entity <pg_log_mul_17_1> (Architecture <rtl>).
+Entity <pg_log_mul_17_1> analyzed. Unit <pg_log_mul_17_1> generated.
+
+Analyzing Entity <pg_adder_RCA_ADD_15_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_ADD_15_1> analyzed. Unit <pg_adder_RCA_ADD_15_1> generated.
+
+Analyzing Entity <pg_log_sdiv_17_1> (Architecture <rtl>).
+Entity <pg_log_sdiv_17_1> analyzed. Unit <pg_log_sdiv_17_1> generated.
+
+Analyzing Entity <pg_adder_RCA_SUB_16_1> (Architecture <rtl>).
+Entity <pg_adder_RCA_SUB_16_1> analyzed. Unit <pg_adder_RCA_SUB_16_1> generated.
+
+Analyzing Entity <pg_float_expadd_m31_17_8_1> (Architecture <rtl>).
+Entity <pg_float_expadd_m31_17_8_1> analyzed. Unit <pg_float_expadd_m31_17_8_1> generated.
+
+Analyzing Entity <pg_conv_ltof_17_8_57_2> (Architecture <rtl>).
+Entity <pg_conv_ltof_17_8_57_2> analyzed. Unit <pg_conv_ltof_17_8_57_2> generated.
+
+Analyzing Entity <bram_rom_8f28_8_8_1> (Architecture <rtl>).
+Entity <bram_rom_8f28_8_8_1> analyzed. Unit <bram_rom_8f28_8_8_1> generated.
+
+Analyzing Entity <unreg_shift_ltof_9_7_56> (Architecture <rtl>).
+Entity <unreg_shift_ltof_9_7_56> analyzed. Unit <unreg_shift_ltof_9_7_56> generated.
+
+Analyzing Entity <pg_fix_accum_57_64_1> (Architecture <rtl>).
+Entity <pg_fix_accum_57_64_1> analyzed. Unit <pg_fix_accum_57_64_1> generated.
+
+Analyzing generic Entity <fix_accum_reg_last_1> (Architecture <rtl>).
+	WIDTH = 64
+WARNING:Xst:819 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd line 3074: The following signals are missing in the process sensitivity list:
+   zeros.
+Entity <fix_accum_reg_last_1> analyzed. Unit <fix_accum_reg_last_1> generated.
+
+Analyzing Entity <pg_pdelay_17_3> (Architecture <rtl>).
+Entity <pg_pdelay_17_3> analyzed. Unit <pg_pdelay_17_3> generated.
+
+Analyzing Entity <pg_pdelay_17_12> (Architecture <rtl>).
+Entity <pg_pdelay_17_12> analyzed. Unit <pg_pdelay_17_12> generated.
+
+Analyzing Entity <pg_pdelay_17_10> (Architecture <rtl>).
+Entity <pg_pdelay_17_10> analyzed. Unit <pg_pdelay_17_10> generated.
+
+Analyzing Entity <calc> (Architecture <rtl>).
+WARNING:Xst:819 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/calc.vhd line 53: The following signals are missing in the process sensitivity list:
+   n<17>, n<16>, n<15>, n<14>, n<13>, n<12>, n<11>, n<10>, n<9>, n<8>, n<7>, n<6>, n<5>, n<4>, n<3>, n<2>, n<1>, n<0>.
+Entity <calc> analyzed. Unit <calc> generated.
+
+Analyzing Entity <pipe_sts> (Architecture <rtl>).
+Entity <pipe_sts> analyzed. Unit <pipe_sts> generated.
+
+Analyzing Entity <setn> (Architecture <rtl>).
+Entity <setn> analyzed. Unit <setn> generated.
+
+Analyzing Entity <jmem> (Architecture <rtl>).
+Entity <jmem> analyzed. Unit <jmem> generated.
+
+Analyzing Entity <dpram> (Architecture <rtl>).
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+WARNING:Xst:753 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Unconnected output port 'doa' of component 'RAMB16_S1_S1'.
+WARNING:Xst:766 - /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd line 53: Generating a Black Box for component <RAMB16_S1_S1>.
+Entity <dpram> analyzed. Unit <dpram> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dpram>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/dpram.vhd.
+Unit <dpram> synthesized.
+
+
+Synthesizing Unit <fix_accum_reg_last_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 64-bit adder for signal <$n0002> created at line 3076.
+    Found 63-bit adder for signal <$n0003> created at line 3076.
+    Found 64-bit subtractor for signal <$n0004> created at line 3078.
+    Found 64-bit subtractor for signal <$n0006> created at line 3078.
+    Found 64-bit register for signal <reg_vmp0>.
+    Found 1-bit register for signal <run1>.
+    Found 128 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  65 D-type flip-flop(s).
+	inferred   4 Adder/Subtracter(s).
+	inferred 128 Multiplexer(s).
+Unit <fix_accum_reg_last_1> synthesized.
+
+
+Synthesizing Unit <unreg_shift_ltof_9_7_56>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <control<6>> is never used.
+WARNING:Xst:646 - Signal <c5<4:0>> is assigned but never used.
+WARNING:Xst:1780 - Signal <o0> is never used or assigned.
+WARNING:Xst:646 - Signal <o6<71:64>> is assigned but never used.
+WARNING:Xst:646 - Signal <o6<7:0>> is assigned but never used.
+WARNING:Xst:1780 - Signal <o6d> is never used or assigned.
+    Found 10-bit shifter logical left for signal <o1>.
+    Found 164 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred 164 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <unreg_shift_ltof_9_7_56> synthesized.
+
+
+Synthesizing Unit <bram_rom_8f28_8_8_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 256x8-bit ROM for signal <$n0001> created at line 2932.
+    Found 8-bit register for signal <outdata>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bram_rom_8f28_8_8_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_16_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 16-bit register for signal <z>.
+    Found 16-bit subtractor for signal <sum>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_SUB_16_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_ADD_15_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 15-bit register for signal <z>.
+    Found 15-bit adder for signal <sum>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_ADD_15_1> synthesized.
+
+
+Synthesizing Unit <pg_lcell35>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell35> synthesized.
+
+
+Synthesizing Unit <pg_lcell34>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell34> synthesized.
+
+
+Synthesizing Unit <pg_lcell33>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell33> synthesized.
+
+
+Synthesizing Unit <pg_lcell32>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell32> synthesized.
+
+
+Synthesizing Unit <pg_lcell31>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell31> synthesized.
+
+
+Synthesizing Unit <pg_lcell30>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell30> synthesized.
+
+
+Synthesizing Unit <pg_lcell29>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell29> synthesized.
+
+
+Synthesizing Unit <pg_lcell28>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell28> synthesized.
+
+
+Synthesizing Unit <pg_lcell27>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell27> synthesized.
+
+
+Synthesizing Unit <pg_lcell26>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell26> synthesized.
+
+
+Synthesizing Unit <pg_lcell25>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell25> synthesized.
+
+
+Synthesizing Unit <pg_lcell24>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell24> synthesized.
+
+
+Synthesizing Unit <pg_lcell23>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell23> synthesized.
+
+
+Synthesizing Unit <pg_lcell22>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell22> synthesized.
+
+
+Synthesizing Unit <pg_lcell21>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell21> synthesized.
+
+
+Synthesizing Unit <pg_lcell20>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell20> synthesized.
+
+
+Synthesizing Unit <pg_lcell19>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell19> synthesized.
+
+
+Synthesizing Unit <pg_lcell18>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell18> synthesized.
+
+
+Synthesizing Unit <pg_lcell17>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell17> synthesized.
+
+
+Synthesizing Unit <pg_lcell16>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell16> synthesized.
+
+
+Synthesizing Unit <pg_lcell15>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell15> synthesized.
+
+
+Synthesizing Unit <pg_lcell14>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell14> synthesized.
+
+
+Synthesizing Unit <pg_lcell13>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell13> synthesized.
+
+
+Synthesizing Unit <pg_lcell12>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell12> synthesized.
+
+
+Synthesizing Unit <pg_lcell11>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell11> synthesized.
+
+
+Synthesizing Unit <pg_lcell10>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell10> synthesized.
+
+
+Synthesizing Unit <pg_lcell9>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell9> synthesized.
+
+
+Synthesizing Unit <pg_lcell8>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell8> synthesized.
+
+
+Synthesizing Unit <pg_lcell7>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell7> synthesized.
+
+
+Synthesizing Unit <pg_lcell6>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell6> synthesized.
+
+
+Synthesizing Unit <pg_lcell5>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell5> synthesized.
+
+
+Synthesizing Unit <pg_lcell4>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell4> synthesized.
+
+
+Synthesizing Unit <pg_lcell3>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell3> synthesized.
+
+
+Synthesizing Unit <pg_lcell2>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell2> synthesized.
+
+
+Synthesizing Unit <pg_lcell1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell1> synthesized.
+
+
+Synthesizing Unit <pg_lcell>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+Unit <pg_lcell> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_ADD_16_0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 16-bit adder for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_ADD_16_0> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_11_0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 11-bit subtractor for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_SUB_11_0> synthesized.
+
+
+Synthesizing Unit <pg_log_unsigned_add_umult_6_9_0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 9x6-bit multiplier for signal <s>.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <pg_log_unsigned_add_umult_6_9_0> synthesized.
+
+
+Synthesizing Unit <lcell_rom_a906_6_9_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:1780 - Signal <adr1<3:0>> is never used or assigned.
+WARNING:Xst:1780 - Signal <adr2<4:0>> is never used or assigned.
+    Found 1-bit register for signal <adr2<5>>.
+    Found 9-bit register for signal <lc_5_0>.
+    Found 9-bit register for signal <lc_5_1>.
+    Found 27 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred  27 Multiplexer(s).
+Unit <lcell_rom_a906_6_9_1> synthesized.
+
+
+Synthesizing Unit <lcell_rom_a106_6_10_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:1780 - Signal <adr1<3:0>> is never used or assigned.
+WARNING:Xst:1780 - Signal <adr2<4:0>> is never used or assigned.
+    Found 1-bit register for signal <adr2<5>>.
+    Found 10-bit register for signal <lc_5_0>.
+    Found 10-bit register for signal <lc_5_1>.
+    Found 30 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+	inferred  30 Multiplexer(s).
+Unit <lcell_rom_a106_6_10_1> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_16_0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 16-bit subtractor for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_SUB_16_0> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_17_0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 17-bit subtractor for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_SUB_17_0> synthesized.
+
+
+Synthesizing Unit <unreg_add_sub0>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 5-bit adder for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <unreg_add_sub0> synthesized.
+
+
+Synthesizing Unit <bram_rom_8408_10_8_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 1024x8-bit ROM for signal <$n0001> created at line 1423.
+    Found 8-bit register for signal <outdata>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bram_rom_8408_10_8_1> synthesized.
+
+
+Synthesizing Unit <unreg_shift_ftol_30_10>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 10-bit 16-to-1 multiplexer for signal <c0xxxx>.
+    Found 10-bit 16-to-1 multiplexer for signal <c1xxxx>.
+    Found 10 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  30 Multiplexer(s).
+Unit <unreg_shift_ftol_30_10> synthesized.
+
+
+Synthesizing Unit <penc_31_5>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <a<0>> is never used.
+Unit <penc_31_5> synthesized.
+
+
+Synthesizing Unit <unreg_add_sub>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 31-bit adder for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+Unit <unreg_add_sub> synthesized.
+
+
+Synthesizing Unit <pg_adder_RCA_SUB_32_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 32-bit register for signal <z>.
+    Found 32-bit subtractor for signal <sum>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_adder_RCA_SUB_32_1> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_10>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 10-bit shift register for signal <x10>.
+    Summary:
+	inferred  17 Shift register(s).
+Unit <pg_pdelay_17_10> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_12>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 12-bit shift register for signal <x12>.
+    Summary:
+	inferred  17 Shift register(s).
+Unit <pg_pdelay_17_12> synthesized.
+
+
+Synthesizing Unit <pg_pdelay_17_3>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 3-bit shift register for signal <x3>.
+    Summary:
+	inferred  17 Shift register(s).
+Unit <pg_pdelay_17_3> synthesized.
+
+
+Synthesizing Unit <pg_fix_accum_57_64_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:646 - Signal <rsig<1>> is assigned but never used.
+WARNING:Xst:646 - Signal <carry<0>> is assigned but never used.
+Unit <pg_fix_accum_57_64_1> synthesized.
+
+
+Synthesizing Unit <pg_conv_ltof_17_8_57_2>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 57-bit register for signal <fixdata>.
+    Found 7-bit register for signal <exp1>.
+    Found 1-bit register for signal <nz1>.
+    Found 1-bit register for signal <sign1>.
+    Summary:
+	inferred  66 D-type flip-flop(s).
+Unit <pg_conv_ltof_17_8_57_2> synthesized.
+
+
+Synthesizing Unit <pg_float_expadd_m31_17_8_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:646 - Signal <expz<7>> is assigned but never used.
+WARNING:Xst:1780 - Signal <nonzz> is never used or assigned.
+WARNING:Xst:1780 - Signal <signz> is never used or assigned.
+WARNING:Xst:1780 - Signal <manz> is never used or assigned.
+    Found 17-bit register for signal <z>.
+    Found 7-bit adder carry out for signal <$n0000> created at line 2469.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+Unit <pg_float_expadd_m31_17_8_1> synthesized.
+
+
+Synthesizing Unit <pg_log_sdiv_17_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 2-bit register for signal <z<16:15>>.
+    Found 1-bit xor2 for signal <$n0000> created at line 2403.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <pg_log_sdiv_17_1> synthesized.
+
+
+Synthesizing Unit <pg_log_mul_17_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+    Found 2-bit register for signal <z<16:15>>.
+    Found 1-bit xor2 for signal <$n0000> created at line 2340.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <pg_log_mul_17_1> synthesized.
+
+
+Synthesizing Unit <pg_log_shift_m1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+WARNING:Xst:647 - Input <x<16>> is never used.
+WARNING:Xst:647 - Input <x<0>> is never used.
+Unit <pg_log_shift_m1> synthesized.
+
+
+Synthesizing Unit <pg_log_unsigned_add_itp_17_8_6_4>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:646 - Signal <itp_subz<1:0>> is assigned but never used.
+WARNING:Xst:646 - Signal <itp_c1dx<7:0>> is assigned but never used.
+    Found 17-bit register for signal <z>.
+    Found 16-bit register for signal <d1>.
+    Found 1-bit register for signal <d_isz1>.
+    Found 1-bit register for signal <d_isz4>.
+    Found 1-bit register for signal <df1>.
+    Found 1-bit register for signal <df4>.
+    Found 10-bit register for signal <itp_c0d2>.
+    Found 10-bit register for signal <itp_c1dx2>.
+    Found 6-bit register for signal <itp_dx1>.
+    Found 1-bit register for signal <sign2>.
+    Found 1-bit register for signal <sign3>.
+    Found 1-bit register for signal <sign6>.
+    Found 16-bit register for signal <x3>.
+    Found 16-bit register for signal <x4>.
+    Found 16-bit register for signal <x7>.
+    Found 33 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred 114 D-type flip-flop(s).
+	inferred  33 Multiplexer(s).
+Unit <pg_log_unsigned_add_itp_17_8_6_4> synthesized.
+
+
+Synthesizing Unit <pg_log_shift_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+WARNING:Xst:647 - Input <x<16>> is never used.
+WARNING:Xst:647 - Input <x<14>> is never used.
+Unit <pg_log_shift_1> synthesized.
+
+
+Synthesizing Unit <pg_conv_ftol_32_17_8_2>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+WARNING:Xst:1780 - Signal <sign0r> is never used or assigned.
+WARNING:Xst:1780 - Signal <sign> is never used or assigned.
+    Found 2-bit register for signal <logdata<16:15>>.
+    Found 5-bit register for signal <logdata<12:8>>.
+    Found 5-bit register for signal <c2>.
+    Found 30-bit register for signal <d4>.
+    Found 1-bit register for signal <nz1>.
+    Found 1-bit register for signal <sign2>.
+    Found 31 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  44 D-type flip-flop(s).
+	inferred  31 Multiplexer(s).
+Unit <pg_conv_ftol_32_17_8_2> synthesized.
+
+
+Synthesizing Unit <pg_fix_sub_32_1>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_module.vhd.
+Unit <pg_fix_sub_32_1> synthesized.
+
+
+Synthesizing Unit <pipe>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_pipe.vhd.
+WARNING:Xst:647 - Input <p_adrovp> is never used.
+WARNING:Xst:647 - Input <rst> is never used.
+WARNING:Xst:647 - Input <p_adrivp> is never used.
+WARNING:Xst:647 - Input <p_jdata<127:113>> is never used.
+    Found 64-bit register for signal <p_datao>.
+    Found 1-bit register for signal <p_runret>.
+    Found 17-bit register for signal <ieps2>.
+    Found 17-bit register for signal <ireg_ieps2>.
+    Found 32-bit register for signal <ireg_xi_0>.
+    Found 32-bit register for signal <ireg_xi_1>.
+    Found 32-bit register for signal <ireg_xi_2>.
+    Found 3-bit shift register for signal <run<22:20>>.
+    Found 3-bit shift register for signal <run<19>>.
+    Found 17-bit shift register for signal <run<16>>.
+    Found 32-bit register for signal <xi_0>.
+    Found 32-bit register for signal <xi_1>.
+    Found 32-bit register for signal <xi_2>.
+    Found 49 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred 294 D-type flip-flop(s).
+	inferred  49 Multiplexer(s).
+	inferred   2 Shift register(s).
+Unit <pipe> synthesized.
+
+
+Synthesizing Unit <jmem>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/jmem.vhd.
+WARNING:Xst:647 - Input <rst> is never used.
+WARNING:Xst:647 - Input <radr<15>> is never used.
+WARNING:Xst:647 - Input <radr<0>> is never used.
+WARNING:Xst:647 - Input <wadr<15>> is never used.
+WARNING:Xst:1780 - Signal <adr1> is never used or assigned.
+WARNING:Xst:1780 - Signal <we2> is never used or assigned.
+WARNING:Xst:1780 - Signal <we3> is never used or assigned.
+WARNING:Xst:1780 - Signal <nadr1> is never used or assigned.
+Unit <jmem> synthesized.
+
+
+Synthesizing Unit <setn>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/setn.vhd.
+    Found 32-bit register for signal <nreg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <setn> synthesized.
+
+
+Synthesizing Unit <pipe_sts>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pipe_sts.vhd.
+WARNING:Xst:1780 - Signal <cntr> is never used or assigned.
+WARNING:Xst:1780 - Signal <sts> is never used or assigned.
+WARNING:Xst:1780 - Signal <sts_reg> is never used or assigned.
+    Register <status<6>> equivalent to <status<7>> has been removed
+    Register <status<5>> equivalent to <status<7>> has been removed
+    Register <status<4>> equivalent to <status<7>> has been removed
+    Register <status<3>> equivalent to <status<7>> has been removed
+    Register <status<2>> equivalent to <status<7>> has been removed
+    Register <status<1>> equivalent to <status<7>> has been removed
+    Register <status<0>> equivalent to <status<7>> has been removed
+    Found 1-bit register for signal <status<7>>.
+    Found 1-bit register for signal <irun>.
+    Found 1-bit register for signal <rund>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <pipe_sts> synthesized.
+
+
+Synthesizing Unit <calc>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/calc.vhd.
+WARNING:Xst:647 - Input <n<31:18>> is never used.
+WARNING:Xst:1780 - Signal <rstn<31:1>> is never used or assigned.
+    Found 1-bit register for signal <run>.
+    Found 18-bit down counter for signal <mema_dc>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <rstn<0>>.
+    Found 1-bit register for signal <start_r>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <calc> synthesized.
+
+
+Synthesizing Unit <pg_pipe>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pg_pipe.vhd.
+WARNING:Xst:646 - Signal <runret<4:1>> is assigned but never used.
+    Found 64 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred  64 Multiplexer(s).
+Unit <pg_pipe> synthesized.
+
+
+Synthesizing Unit <adr_dec>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/adr_dec.vhd.
+WARNING:Xst:647 - Input <clk> is never used.
+    Found 2-bit comparator equal for signal <$n0005> created at line 43.
+    Found 2-bit comparator equal for signal <$n0007> created at line 53.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <adr_dec> synthesized.
+
+
+Synthesizing Unit <pgpg_mem>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../pgpg_mem/pgpg_mem.vhd.
+WARNING:Xst:1780 - Signal <jmem_adr> is never used or assigned.
+WARNING:Xst:1780 - Signal <ADR_ff> is never used or assigned.
+WARNING:Xst:1780 - Signal <odata_jmem> is never used or assigned.
+WARNING:Xst:1780 - Signal <debug_p_jdata> is never used or assigned.
+WARNING:Xst:646 - Signal <is_fo> is assigned but never used.
+WARNING:Xst:646 - Signal <odata_sts<31:1>> is assigned but never used.
+WARNING:Xst:646 - Signal <calc_jadr<31:16>> is assigned but never used.
+    Found 1-bit register for signal <STS>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <pgpg_mem> synthesized.
+
+
+Synthesizing Unit <dmaw_mem_we>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_mem_we.vhd.
+    Found 1-bit register for signal <MEM_WE>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dmaw_mem_we> synthesized.
+
+
+Synthesizing Unit <dmaw_mem_adr>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_mem_adr.vhd.
+    Found 19-bit register for signal <MEM_ADR>.
+    Found 19-bit adder for signal <$n0003> created at line 57.
+    Found 19-bit register for signal <mem_adr_inc>.
+    Found 19-bit adder for signal <z>.
+    Summary:
+	inferred  38 D-type flip-flop(s).
+	inferred   2 Adder/Subtracter(s).
+Unit <dmaw_mem_adr> synthesized.
+
+
+Synthesizing Unit <dmaw_start_adr>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_start_adr.vhd.
+WARNING:Xst:647 - Input <DBUS<63:19>> is never used.
+    Found 19-bit register for signal <START_ADR>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <dmaw_start_adr> synthesized.
+
+
+Synthesizing Unit <dmaw_state>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw_state.vhd.
+    Found finite state machine <FSM_0> for signal <state_ff>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <dmaw_state> synthesized.
+
+
+Synthesizing Unit <dmar_dbus_hiz>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_dbus_hiz.vhd.
+    Found 1-bit register for signal <DBUS_HiZ>.
+    Found 1-bit register for signal <en0>.
+    Found 1-bit register for signal <en1>.
+    Found 1-bit register for signal <en2>.
+    Found 1-bit register for signal <en3>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <dmar_dbus_hiz> synthesized.
+
+
+Synthesizing Unit <dmar_mem_re>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_mem_re.vhd.
+Unit <dmar_mem_re> synthesized.
+
+
+Synthesizing Unit <dmar_mem_adr>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_mem_adr.vhd.
+Unit <dmar_mem_adr> synthesized.
+
+
+Synthesizing Unit <dmar_start_adr>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_start_adr.vhd.
+Unit <dmar_start_adr> synthesized.
+
+
+Synthesizing Unit <dmar_state>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar_state.vhd.
+Unit <dmar_state> synthesized.
+
+
+Synthesizing Unit <user>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../user.vhd.
+WARNING:Xst:647 - Input <RE> is never used.
+Unit <user> synthesized.
+
+
+Synthesizing Unit <dmar>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmar.vhd.
+Unit <dmar> synthesized.
+
+
+Synthesizing Unit <dmaw>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../dmaw.vhd.
+WARNING:Xst:1780 - Signal <we> is never used or assigned.
+WARNING:Xst:646 - Signal <ena4> is assigned but never used.
+    Found 19-bit register for signal <MEM_ADR>.
+    Found 64-bit register for signal <MEM_DATA>.
+    Found 1-bit register for signal <MEM_WE>.
+    Found 19-bit adder for signal <$n0008> created at line 69.
+    Found 19-bit register for signal <acnt>.
+    Found 1-bit register for signal <ena1>.
+    Summary:
+	inferred 104 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+Unit <dmaw> synthesized.
+
+
+Synthesizing Unit <CLK_MULDIV>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../clk_muldiv.vhd.
+Unit <CLK_MULDIV> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is /home/hamada/pgr/Demos/PairWiseErr/pgr/ISE_PROJECT.0/proj/../top.vhd.
+WARNING:Xst:1778 - Inout <CBUS<7>> is assigned but never used.
+WARNING:Xst:1779 - Inout <CBUS<6:0>> is used but is never assigned.
+    Found 64-bit tristate buffer for signal <DBUS>.
+    Found 1-bit tristate buffer for signal <TPIN<15>>.
+    Found 4-bit register for signal <TPIN<14:11>>.
+    Found 1-bit tristate buffer for signal <TPIN<10>>.
+    Found 2-bit register for signal <TPIN<9:8>>.
+    Found 1-bit register for signal <TPIN<7>>.
+    Found 7-bit register for signal <TPIN<6:0>>.
+    Found 64-bit register for signal <DBUS_Port_ff>.
+    Found 2-bit register for signal <FPGA_NO_ff>.
+    Found 8-bit register for signal <LED_ff>.
+    Found 6-bit register for signal <tmp0>.
+    Summary:
+	inferred  94 D-type flip-flop(s).
+	inferred  70 Tristate(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+INFO:Xst:1647 - Data output of ROM <Mrom__n0001> in block <bram_rom_8408_10_8_1> is tied to register <outdata> in block <bram_rom_8408_10_8_1>.
+INFO:Xst:1650 - The register is removed and the ROM is implemented as read-only block RAM.
+INFO:Xst:1647 - Data output of ROM <Mrom__n0001> in block <bram_rom_8f28_8_8_1> is tied to register <outdata> in block <bram_rom_8f28_8_8_1>.
+INFO:Xst:1650 - The register is removed and the ROM is implemented as read-only block RAM.
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Selecting encoding for FSM_0 ...
+Optimizing FSM <FSM_0> on signal <state_ff> with one-hot encoding.
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# FSMs                             : 1
+# Block RAMs                       : 30
+ 1024x8-bit single-port block RAM  : 15
+ 256x8-bit single-port block RAM   : 15
+# Multipliers                      : 15
+ 9x6-bit multiplier                : 15
+# Adders/Subtractors               : 208
+ 19-bit adder                      : 3
+ 7-bit adder carry out             : 15
+ 32-bit subtractor                 : 15
+ 31-bit adder                      : 15
+ 5-bit adder                       : 15
+ 17-bit subtractor                 : 15
+ 11-bit subtractor                 : 15
+ 16-bit adder                      : 15
+ 15-bit adder                      : 20
+ 16-bit subtractor                 : 20
+ 64-bit subtractor                 : 30
+ 63-bit adder                      : 15
+ 64-bit adder                      : 15
+# Counters                         : 1
+ 18-bit down counter               : 1
+# Registers                        : 1865
+ 8-bit register                    : 1
+ 2-bit register                    : 1
+ 1-bit register                    : 1529
+ 19-bit register                   : 5
+ 32-bit register                   : 46
+ 64-bit register                   : 22
+ 17-bit register                   : 25
+ 5-bit register                    : 15
+ 30-bit register                   : 15
+ 6-bit register                    : 16
+ 7-bit register                    : 15
+ 10-bit register                   : 60
+ 9-bit register                    : 30
+ 15-bit register                   : 20
+ 16-bit register                   : 65
+# Shift Registers                  : 435
+ 3-bit shift register              : 90
+ 17-bit shift register             : 5
+ 12-bit shift register             : 85
+ 10-bit shift register             : 255
+# Comparators                      : 2
+ 2-bit comparator equal            : 2
+# Multiplexers                     : 311
+ 64-bit 2-to-1 multiplexer         : 31
+ 17-bit 2-to-1 multiplexer         : 5
+ 32-bit 2-to-1 multiplexer         : 5
+ 31-bit 2-to-1 multiplexer         : 15
+ 16-bit 2-to-1 multiplexer         : 45
+ 1-bit 2-to-1 multiplexer          : 15
+ 10-bit 16-to-1 multiplexer        : 30
+ 10-bit 2-to-1 multiplexer         : 60
+ 9-bit 2-to-1 multiplexer          : 45
+ 72-bit 2-to-1 multiplexer         : 15
+ 40-bit 2-to-1 multiplexer         : 15
+ 24-bit 2-to-1 multiplexer         : 15
+ 12-bit 2-to-1 multiplexer         : 15
+# Logic shifters                   : 15
+ 10-bit shifter logical left       : 15
+# Tristates                        : 7
+ 1-bit tristate buffer             : 6
+ 64-bit tristate buffer            : 1
+# Xors                             : 25
+ 1-bit xor2                        : 25
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch  <itp_c1dx2_9> (without init value) is constant in block <pg_log_unsigned_add_itp_17_8_6_4>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <itp_c1dx2_7> (without init value) is constant in block <pg_log_unsigned_add_itp_17_8_6_4>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <itp_c1dx2_8> (without init value) is constant in block <pg_log_unsigned_add_itp_17_8_6_4>.
+WARNING:Xst:1426 - The value init of the FF/Latch LED_ff_4 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch LED_ff_3 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1290 - Hierarchical block <u3> is unconnected in block <u1>.
+   It will be removed from the design.
+WARNING:Xst:1291 - FF/Latch <nreg_31> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_18> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_19> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_20> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_21> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_22> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_23> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_24> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_25> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_26> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_27> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_28> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_29> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <nreg_30> is unconnected in block <unit8>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u18>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u19>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u20>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u21>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u22>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u23>.
+WARNING:Xst:1291 - FF/Latch <run_20> is unconnected in block <upipe4>.
+WARNING:Xst:1291 - FF/Latch <run_21> is unconnected in block <upipe4>.
+WARNING:Xst:1291 - FF/Latch <run_22> is unconnected in block <upipe4>.
+WARNING:Xst:1291 - FF/Latch <p_runret> is unconnected in block <upipe4>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u18>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u19>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u20>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u21>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u22>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u23>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u18>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u19>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u20>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u21>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u22>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u23>.
+WARNING:Xst:1291 - FF/Latch <run_20> is unconnected in block <upipe1>.
+WARNING:Xst:1291 - FF/Latch <run_21> is unconnected in block <upipe1>.
+WARNING:Xst:1291 - FF/Latch <run_22> is unconnected in block <upipe1>.
+WARNING:Xst:1291 - FF/Latch <p_runret> is unconnected in block <upipe1>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u18>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u19>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u20>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u21>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u22>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u23>.
+WARNING:Xst:1291 - FF/Latch <run_20> is unconnected in block <upipe2>.
+WARNING:Xst:1291 - FF/Latch <run_21> is unconnected in block <upipe2>.
+WARNING:Xst:1291 - FF/Latch <run_22> is unconnected in block <upipe2>.
+WARNING:Xst:1291 - FF/Latch <p_runret> is unconnected in block <upipe2>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u18>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u19>.
+WARNING:Xst:1291 - FF/Latch <z_14> is unconnected in block <u20>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u21>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u22>.
+WARNING:Xst:1291 - FF/Latch <exp1_6> is unconnected in block <u23>.
+WARNING:Xst:1291 - FF/Latch <run_20> is unconnected in block <upipe3>.
+WARNING:Xst:1291 - FF/Latch <run_21> is unconnected in block <upipe3>.
+WARNING:Xst:1291 - FF/Latch <run_22> is unconnected in block <upipe3>.
+WARNING:Xst:1291 - FF/Latch <p_runret> is unconnected in block <upipe3>.
+
+User Interruption
+--> 
+
+
+Total memory usage is 150704 kilobytes
+
+
