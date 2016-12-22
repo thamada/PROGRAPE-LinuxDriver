@@ -1,0 +1,361 @@
+# Reading C:/Modeltech_xe/tcl/vsim/pref.tcl 
+# do sim_local_io.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_write
+# -- Compiling architecture rtl of local_write
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_cnt
+# -- Compiling architecture rtl of local_read_cnt
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_if
+# -- Compiling architecture rtl of local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read
+# -- Compiling architecture rtl of local_read
+# -- Loading entity local_read_cnt
+# -- Loading entity local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_io
+# -- Compiling architecture rtl of local_io
+# -- Loading entity local_write
+# -- Loading entity local_read
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity sim_local_io
+# -- Compiling architecture testbench_arch of sim_local_io
+# -- Loading entity local_io
+# -- Compiling configuration local_io_cfg
+# -- Loading entity sim_local_io
+# -- Loading architecture testbench_arch of sim_local_io
+# vsim -lib work -t 1ps sim_local_io 
+# Loading C:/Modeltech_xe/win32xoem/../std.standard
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_1164(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_arith(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_unsigned(body)
+# Loading C:/Modeltech_xe/win32xoem/../std.textio(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_textio(body)
+# Loading work.sim_local_io(testbench_arch)
+# Loading work.local_io(rtl)
+# Loading work.local_write(rtl)
+# Loading work.local_read(rtl)
+# Loading work.local_read_cnt(rtl)
+# Loading work.local_read_if(rtl)
+# .wave
+# .structure
+# .signals
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 19700 ns  Iteration: 0  Process: /sim_local_io/line__116 File: sim_local_io.vhw
+# Break at sim_local_io.vhw line 369
+# Simulation Breakpoint: Break at sim_local_io.vhw line 369
+# MACRO ./sim_local_io.fdo PAUSED at line 17
+do sim_local_io.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_write
+# -- Compiling architecture rtl of local_write
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_cnt
+# -- Compiling architecture rtl of local_read_cnt
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_if
+# -- Compiling architecture rtl of local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read
+# -- Compiling architecture rtl of local_read
+# -- Loading entity local_read_cnt
+# -- Loading entity local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_io
+# -- Compiling architecture rtl of local_io
+# -- Loading entity local_write
+# -- Loading entity local_read
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity sim_local_io
+# -- Compiling architecture testbench_arch of sim_local_io
+# -- Loading entity local_io
+# -- Compiling configuration local_io_cfg
+# -- Loading entity sim_local_io
+# -- Loading architecture testbench_arch of sim_local_io
+# vsim -lib work -t 1ps sim_local_io 
+# Loading C:/Modeltech_xe/win32xoem/../std.standard
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_1164(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_arith(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_unsigned(body)
+# Loading C:/Modeltech_xe/win32xoem/../std.textio(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_textio(body)
+# Loading work.sim_local_io(testbench_arch)
+# Loading work.local_io(rtl)
+# Loading work.local_write(rtl)
+# Loading work.local_read(rtl)
+# Loading work.local_read_cnt(rtl)
+# Loading work.local_read_if(rtl)
+# .wave
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 19700 ns  Iteration: 0  Process: /sim_local_io/line__116 File: sim_local_io.vhw
+# Break at sim_local_io.vhw line 369
+do sim_local_io.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_write
+# -- Compiling architecture rtl of local_write
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_cnt
+# -- Compiling architecture rtl of local_read_cnt
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_if
+# -- Compiling architecture rtl of local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read
+# -- Compiling architecture rtl of local_read
+# -- Loading entity local_read_cnt
+# -- Loading entity local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_io
+# -- Compiling architecture rtl of local_io
+# -- Loading entity local_write
+# -- Loading entity local_read
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity sim_local_io
+# -- Compiling architecture testbench_arch of sim_local_io
+# -- Loading entity local_io
+# -- Compiling configuration local_io_cfg
+# -- Loading entity sim_local_io
+# -- Loading architecture testbench_arch of sim_local_io
+# vsim -lib work -t 1ps sim_local_io 
+# Loading C:/Modeltech_xe/win32xoem/../std.standard
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_1164(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_arith(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_unsigned(body)
+# Loading C:/Modeltech_xe/win32xoem/../std.textio(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_textio(body)
+# Loading work.sim_local_io(testbench_arch)
+# Loading work.local_io(rtl)
+# Loading work.local_write(rtl)
+# Loading work.local_read(rtl)
+# Loading work.local_read_cnt(rtl)
+# Loading work.local_read_if(rtl)
+# .wave
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 19700 ns  Iteration: 0  Process: /sim_local_io/line__116 File: sim_local_io.vhw
+# Break at sim_local_io.vhw line 369
+do sim_local_io.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_write
+# -- Compiling architecture rtl of local_write
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_cnt
+# -- Compiling architecture rtl of local_read_cnt
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_if
+# -- Compiling architecture rtl of local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read
+# -- Compiling architecture rtl of local_read
+# -- Loading entity local_read_cnt
+# -- Loading entity local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_io
+# -- Compiling architecture rtl of local_io
+# -- Loading entity local_write
+# -- Loading entity local_read
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity sim_local_io
+# -- Compiling architecture testbench_arch of sim_local_io
+# -- Loading entity local_io
+# -- Compiling configuration local_io_cfg
+# -- Loading entity sim_local_io
+# -- Loading architecture testbench_arch of sim_local_io
+# vsim -lib work -t 1ps sim_local_io 
+# Loading C:/Modeltech_xe/win32xoem/../std.standard
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_1164(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_arith(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_unsigned(body)
+# Loading C:/Modeltech_xe/win32xoem/../std.textio(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_textio(body)
+# Loading work.sim_local_io(testbench_arch)
+# Loading work.local_io(rtl)
+# Loading work.local_write(rtl)
+# Loading work.local_read(rtl)
+# Loading work.local_read_cnt(rtl)
+# Loading work.local_read_if(rtl)
+# .wave
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 19700 ns  Iteration: 0  Process: /sim_local_io/line__116 File: sim_local_io.vhw
+# Break at sim_local_io.vhw line 369
+do sim_local_io.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_write
+# -- Compiling architecture rtl of local_write
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_cnt
+# -- Compiling architecture rtl of local_read_cnt
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read_if
+# -- Compiling architecture rtl of local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_read
+# -- Compiling architecture rtl of local_read
+# -- Loading entity local_read_cnt
+# -- Loading entity local_read_if
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity local_io
+# -- Compiling architecture rtl of local_io
+# -- Loading entity local_write
+# -- Loading entity local_read
+# Model Technology ModelSim XE II vcom 5.7g Compiler 2003.10 Oct 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity sim_local_io
+# -- Compiling architecture testbench_arch of sim_local_io
+# -- Loading entity local_io
+# -- Compiling configuration local_io_cfg
+# -- Loading entity sim_local_io
+# -- Loading architecture testbench_arch of sim_local_io
+# vsim -lib work -t 1ps sim_local_io 
+# Loading C:/Modeltech_xe/win32xoem/../std.standard
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_1164(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_arith(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_unsigned(body)
+# Loading C:/Modeltech_xe/win32xoem/../std.textio(body)
+# Loading C:/Modeltech_xe/win32xoem/../ieee.std_logic_textio(body)
+# Loading work.sim_local_io(testbench_arch)
+# Loading work.local_io(rtl)
+# Loading work.local_write(rtl)
+# Loading work.local_read(rtl)
+# Loading work.local_read_cnt(rtl)
+# Loading work.local_read_if(rtl)
+# .wave
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 19700 ns  Iteration: 0  Process: /sim_local_io/line__116 File: sim_local_io.vhw
+# Break at sim_local_io.vhw line 369
+exit

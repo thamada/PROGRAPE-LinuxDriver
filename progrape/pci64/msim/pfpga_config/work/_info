@@ -1,0 +1,94 @@
+m255
+cModel Technology
+dC:\cygwin\home\Administrator\Fkit\pci64\tmp2
+Epfpga_config
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1100934767
+dC:\cygwin\home\Administrator\Fkit\pci64\msim\pfpga_config
+Fpfpga_config.vhd
+l0
+L12
+V8c_QVNP[F0@ZfH^`eN[Q<2
+OX;C;5.7g;15
+31
+o-93 -explicit -O0
+tExplicit T
+Artl
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work pfpga_config 8c_QVNP[F0@ZfH^`eN[Q<2
+l44
+L31
+VUGmQi3G1Pia^A6M6Pdnf11
+OX;C;5.7g;15
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-93 -explicit -O0
+tExplicit T
+Cpfpga_config_cfg
+DE work pfpga_config 8c_QVNP[F0@ZfH^`eN[Q<2
+DA work sim testbench_arch F_0D[;>@;dVKWaVA[gKbd2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work sim ][VDnAQzUGXmi4PiHIYOn2
+w1100054304
+dC:\cygwin\home\Administrator\Fkit\pci64\msim\pfpga_config
+Fsim.vhw
+l0
+L0
+V298N6b_Wd8<lASTfF@RE90
+OX;C;5.7g;15
+31
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+atestbench_arch
+esim
+o-93 -explicit -O0
+tExplicit T
+Esim
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1100054304
+dC:\cygwin\home\Administrator\Fkit\pci64\msim\pfpga_config
+Fsim.vhw
+l0
+L21
+V][VDnAQzUGXmi4PiHIYOn2
+OX;C;5.7g;15
+31
+o-93 -explicit -O0
+tExplicit T
+Atestbench_arch
+DE work pfpga_config 8c_QVNP[F0@ZfH^`eN[Q<2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work sim ][VDnAQzUGXmi4PiHIYOn2
+l64
+L24
+VF_0D[;>@;dVKWaVA[gKbd2
+OX;C;5.7g;15
+31
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+o-93 -explicit -O0
+tExplicit T

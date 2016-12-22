@@ -1,0 +1,5 @@
+-proj c:\cygwin\home\administrator\fkit\pci64\tmp2
+-t sim.tbw
+-source pfpga_config.vhd
+-entity pfpga_config
+-ipcport 1051
